@@ -9,7 +9,9 @@ from .constants import PAD
 from .blocks import (
     get_sinusoid_encoding_table,
     LinearNorm,
+    Condional_LayerNorm,
 )
+
 
 
 class TextEncoder(nn.Module):
@@ -52,7 +54,7 @@ class TextEncoder(nn.Module):
             ]
         )
 
-    def forward(self, src_seq, mask, return_attns=False):
+    def forward(self, src_seq, mask,speaker_embeds=None, return_attns=False):
 
         enc_slf_attn_list = []
         batch_size, max_len = src_seq.shape[0], src_seq.shape[1]
@@ -75,7 +77,7 @@ class TextEncoder(nn.Module):
 
         for enc_layer in self.layer_stack:
             enc_output, enc_slf_attn = enc_layer(
-                enc_output, mask=mask, slf_attn_mask=slf_attn_mask
+                enc_output, mask=mask, speaker_embeds=speaker_embeds, slf_attn_mask=slf_attn_mask
             )
             if return_attns:
                 enc_slf_attn_list += [enc_slf_attn]
@@ -119,7 +121,7 @@ class Decoder(nn.Module):
             ]
         )
 
-    def forward(self, enc_seq, mask, return_attns=False):
+    def forward(self, enc_seq, mask,speaker_embeds=None, return_attns=False):
 
         dec_slf_attn_list = []
         batch_size, max_len = enc_seq.shape[0], enc_seq.shape[1]
@@ -146,7 +148,7 @@ class Decoder(nn.Module):
 
         for dec_layer in self.layer_stack:
             dec_output, dec_slf_attn = dec_layer(
-                dec_output, mask=mask, slf_attn_mask=slf_attn_mask
+                dec_output, mask=mask,speaker_embeds= speaker_embeds, slf_attn_mask=slf_attn_mask
             )
             if return_attns:
                 dec_slf_attn_list += [dec_slf_attn]
@@ -164,14 +166,14 @@ class FFTBlock(nn.Module):
             d_model, d_inner, kernel_size, dropout=dropout
         )
 
-    def forward(self, enc_input, mask=None, slf_attn_mask=None):
+    def forward(self, enc_input, mask=None,speaker_embeds=None, slf_attn_mask=None):
         enc_output, enc_slf_attn = self.slf_attn(
-            enc_input, enc_input, enc_input, mask=slf_attn_mask
+            enc_input, enc_input, enc_input,speaker_embeds=speaker_embeds, mask=slf_attn_mask
         )
         if mask is not None:
             enc_output = enc_output.masked_fill(mask.unsqueeze(-1), 0)
 
-        enc_output = self.pos_ffn(enc_output)
+        enc_output = self.pos_ffn(enc_output,speaker_embeds=speaker_embeds)
         if mask is not None:
             enc_output = enc_output.masked_fill(mask.unsqueeze(-1), 0)
 
@@ -193,13 +195,14 @@ class MultiHeadAttention(nn.Module):
         self.w_vs = LinearNorm(d_model, n_head * d_v)
 
         self.attention = ScaledDotProductAttention(temperature=np.power(d_k, 0.5))
-        self.layer_norm = nn.LayerNorm(d_model)
+        self.layer_norm = Condional_LayerNorm(d_model)
+        # self.layer_norm = nn.LayerNorm(d_model) # change here for Conditional Layer Norm
 
         self.fc = LinearNorm(n_head * d_v, d_model)
 
         self.dropout = nn.Dropout(dropout)
 
-    def forward(self, q, k, v, mask=None):
+    def forward(self, q, k, v,speaker_embeds=None, mask=None):
 
         d_k, d_v, n_head = self.d_k, self.d_v, self.n_head
 
@@ -225,7 +228,8 @@ class MultiHeadAttention(nn.Module):
         )  # b x lq x (n*dv)
 
         output = self.dropout(self.fc(output))
-        output = self.layer_norm(output + residual)
+        output = self.layer_norm(output + residual,speaker_embeds) # conditional layer norm
+        # output = self.layer_norm(output + residual)
 
         return output, attn
 
@@ -274,15 +278,16 @@ class PositionwiseFeedForward(nn.Module):
             padding=(kernel_size[1] - 1) // 2,
         )
 
-        self.layer_norm = nn.LayerNorm(d_in)
+        # self.layer_norm = nn.LayerNorm(d_in)
+        self.layer_norm = Condional_LayerNorm(d_in)
         self.dropout = nn.Dropout(dropout)
 
-    def forward(self, x):
+    def forward(self, x,speaker_embeds= None):
         residual = x
         output = x.transpose(1, 2)
         output = self.w_2(F.relu(self.w_1(output)))
         output = output.transpose(1, 2)
         output = self.dropout(output)
-        output = self.layer_norm(output + residual)
+        output = self.layer_norm(output + residual,speaker_embeds)
 
         return output

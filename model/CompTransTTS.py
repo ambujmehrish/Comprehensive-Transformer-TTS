@@ -87,8 +87,6 @@ class CompTransTTS(nn.Module):
             else None
         )
 
-        texts, text_embeds = self.encoder(texts, src_masks)
-
         speaker_embeds = None
         if self.speaker_emb is not None:
             if self.embedder_type == "none":
@@ -96,6 +94,9 @@ class CompTransTTS(nn.Module):
             else:
                 assert spker_embeds is not None, "Speaker embedding should not be None"
                 speaker_embeds = self.speaker_emb(spker_embeds) # [B, H]
+        
+        
+        texts, text_embeds = self.encoder(texts, src_masks, speaker_embeds=speaker_embeds) # Use speaker embeddings for CLN
 
         (
             output,
@@ -129,7 +130,7 @@ class CompTransTTS(nn.Module):
             step,
         )
 
-        output, mel_masks = self.decoder(output, mel_masks)
+        output, mel_masks = self.decoder(output, mel_masks,speaker_embeds=speaker_embeds)
         output = self.mel_linear(output)
 
         postnet_output = self.postnet(output) + output

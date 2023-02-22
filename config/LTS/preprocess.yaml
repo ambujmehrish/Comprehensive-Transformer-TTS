@@ -1,13 +1,13 @@
-dataset: "VCTK"
+dataset: "LTS"
 
 path:
-  corpus_path: "/data/yingting/Dataset/VCTK"
+  corpus_path: "/666/dsets/LTS/"
   wav_tag: "mic1"
-  wav_dir: "wav48"
-  txt_dir: "txt"
+  wav_dir: "train-clean-100"
+  txt_dir: "train-clean-100"
   lexicon_path: "lexicon/librispeech-lexicon.txt"
-  raw_path: "./raw_data/VCTK"
-  preprocessed_path: "./preprocessed_data/VCTK"
+  raw_path: "./raw_data/LTS"
+  preprocessed_path: "./preprocessed_data/LTS"
 
 preprocessing:
   speaker_embedder: "DeepSpeaker" # support 'none', 'DeepSpeaker'
