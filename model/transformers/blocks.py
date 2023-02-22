@@ -381,8 +381,14 @@ class Condional_LayerNorm(nn.Module):
         return y
 
 class MOA(nn.Module):
-    def __init__(self):
+    def __init__(self,
+                 number_of_adapters,
+                 d_in):
         super(MOA,self).__init__()
+        self.number_of_adapters = number_of_adapters
+        self.d_in = d_in
+        self.W_g = nn.Linear(self.d_in,self.number_of_adapters)
+        
         
     def forward(self,x):
         
