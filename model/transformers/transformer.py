@@ -12,8 +12,7 @@ from .blocks import (
     Condional_LayerNorm,
     MOA,
 )
-
-
+from .adapters import PrefixEncoder
 
 class TextEncoder(nn.Module):
     """ Text Encoder """
@@ -54,11 +53,41 @@ class TextEncoder(nn.Module):
                 for _ in range(n_layers)
             ]
         )
+        self.config = config
+        if config['adapter']['prefix_tuning']:
+            self.num_heads = n_head
+            self.prefix_seq_len = self.config["adapter"]["prefix_seq_len"]
+            self.hidden_size = d_word_vec
+            self.n_embd = self.hidden_size // self.num_heads
+            self.prefix_tokens = torch.arange(self.prefix_seq_len).long()
+            self.prefix_dropout = torch.nn.Dropout(config["adapter"]["prefix_dropout_prob"])
+            self.num_layers = n_layers
+            self.prefix_encoder = PrefixEncoder(config, num_hidden_layers=self.num_layers, hidden_size=self.hidden_size)
 
+    def get_prefix_tuning(self, batch_size):
+        prefix_tokens = self.prefix_tokens.unsqueeze(0).expand(batch_size, -1)#.to(self.layer_norm.device)
+        past_key_values = self.prefix_encoder(prefix_tokens)
+		# bsz, seqlen, _ = past_key_values.shape
+        past_key_values = past_key_values.view(
+			batch_size,
+			self.prefix_seq_len,
+			self.num_layers * 2, 
+			self.num_heads,
+			self.n_embd
+		)
+        past_key_values = self.prefix_dropout(past_key_values)
+        past_key_values = past_key_values.permute([2, 0, 3, 1, 4]).split(2)
+        return past_key_values
+    
+    
     def forward(self, src_seq, mask,speaker_embeds=None, return_attns=False):
 
         enc_slf_attn_list = []
         batch_size, max_len = src_seq.shape[0], src_seq.shape[1]
+        if self.config['adapter']['prefix_tuning']:
+            past_key_values=self.get_prefix_tuning(batch_size=batch_size)
+        else:
+            past_key_values=None
 
         # -- Prepare masks
         slf_attn_mask = mask.unsqueeze(1).expand(-1, max_len, -1)
@@ -78,7 +107,7 @@ class TextEncoder(nn.Module):
 
         for enc_layer in self.layer_stack:
             enc_output, enc_slf_attn = enc_layer(
-                enc_output, mask=mask, speaker_embeds=speaker_embeds, slf_attn_mask=slf_attn_mask
+                enc_output, mask=mask, speaker_embeds=speaker_embeds, slf_attn_mask=slf_attn_mask, past_key_values=past_key_values
             )
             if return_attns:
                 enc_slf_attn_list += [enc_slf_attn]
@@ -121,11 +150,43 @@ class Decoder(nn.Module):
                 for _ in range(n_layers)
             ]
         )
-
+        
+        self.config = config
+        if config['adapter']['prefix_tuning']:
+            self.num_heads = n_head
+            self.prefix_seq_len = self.config["adapter"]["prefix_seq_len"]
+            self.hidden_size = d_word_vec
+            self.n_embd = self.hidden_size // self.num_heads
+            self.prefix_tokens = torch.arange(self.prefix_seq_len).long()
+            self.prefix_dropout = torch.nn.Dropout(config["adapter"]["prefix_dropout_prob"])
+            self.num_layers = n_layers
+            self.prefix_encoder = PrefixEncoder(config, num_hidden_layers=self.num_layers, hidden_size=self.hidden_size)
+        
+    def get_prefix_tuning(self, batch_size):
+        prefix_tokens = self.prefix_tokens.unsqueeze(0).expand(batch_size, -1)#.to(self.layer_norm.device)
+        past_key_values = self.prefix_encoder(prefix_tokens)
+		# bsz, seqlen, _ = past_key_values.shape
+        past_key_values = past_key_values.view(
+			batch_size,
+			self.prefix_seq_len,
+			self.num_layers * 2, 
+			self.num_heads,
+			self.n_embd
+		)
+        past_key_values = self.prefix_dropout(past_key_values)
+        past_key_values = past_key_values.permute([2, 0, 3, 1, 4]).split(2)
+        return past_key_values
+    
     def forward(self, enc_seq, mask,speaker_embeds=None, return_attns=False):
 
         dec_slf_attn_list = []
         batch_size, max_len = enc_seq.shape[0], enc_seq.shape[1]
+        
+        if self.config['adapter']['prefix_tuning']:
+            past_key_values=self.get_prefix_tuning(batch_size=batch_size)
+        else:
+            past_key_values=None
+        
 
         # -- Forward
         if not self.training and enc_seq.shape[1] > self.max_seq_len:
@@ -149,7 +210,7 @@ class Decoder(nn.Module):
 
         for dec_layer in self.layer_stack:
             dec_output, dec_slf_attn = dec_layer(
-                dec_output, mask=mask,speaker_embeds= speaker_embeds, slf_attn_mask=slf_attn_mask
+                dec_output, mask=mask,speaker_embeds= speaker_embeds, slf_attn_mask=slf_attn_mask, past_key_values=past_key_values
             )
             
             if return_attns:
@@ -170,9 +231,9 @@ class FFTBlock(nn.Module):
         )
         # self.config = config 
 
-    def forward(self, enc_input, mask=None,speaker_embeds=None, slf_attn_mask=None):
+    def forward(self, enc_input, mask=None,speaker_embeds=None, slf_attn_mask=None, past_key_values=None):
         enc_output, enc_slf_attn = self.slf_attn(
-            enc_input, enc_input, enc_input,speaker_embeds=speaker_embeds, mask=slf_attn_mask
+            enc_input, enc_input, enc_input,speaker_embeds=speaker_embeds, mask=slf_attn_mask,  past_key_values=past_key_values
         )
         if mask is not None:
             enc_output = enc_output.masked_fill(mask.unsqueeze(-1), 0)
@@ -206,7 +267,7 @@ class MultiHeadAttention(nn.Module):
 
         self.dropout = nn.Dropout(dropout)
 
-    def forward(self, q, k, v,speaker_embeds=None, mask=None):
+    def forward(self, q, k, v,speaker_embeds=None, mask=None,  past_key_values=None):
 
         d_k, d_v, n_head = self.d_k, self.d_v, self.n_head
 
@@ -215,16 +276,38 @@ class MultiHeadAttention(nn.Module):
         sz_b, len_v, _ = v.size()
 
         residual = q
+        batch_size = q.size(0)
+        if past_key_values is not None:
+            mask = mask.repeat(n_head, 1, 1)
+            key_states = self._shape(self.w_ks(k), -1, batch_size, self.d_k)
+            value_states = self._shape(self.w_vs(v), -1, batch_size, self.d_v)
+            key_states = torch.cat([past_key_values[0], key_states], dim=2)
+            value_states = torch.cat([past_key_values[1], value_states], dim=2)
 
-        q = self.w_qs(q).view(sz_b, len_q, n_head, d_k)
-        k = self.w_ks(k).view(sz_b, len_k, n_head, d_k)
-        v = self.w_vs(v).view(sz_b, len_v, n_head, d_v)
-        q = q.permute(2, 0, 1, 3).contiguous().view(-1, len_q, d_k)  # (n*b) x lq x dk
-        k = k.permute(2, 0, 1, 3).contiguous().view(-1, len_k, d_k)  # (n*b) x lk x dk
-        v = v.permute(2, 0, 1, 3).contiguous().view(-1, len_v, d_v)  # (n*b) x lv x dv
+            prefix_attention_mask = torch.ones(batch_size, self.config['adapter']['prefix_seq_len']).to(mask.device)
+            prefix_attention_mask = 1.0 - prefix_attention_mask
+            prefix_attention_mask = prefix_attention_mask[:, None, :].repeat(n_head, mask.size(-1), 1)
 
-        mask = mask.repeat(n_head, 1, 1)  # (n*b) x .. x ..
-        output, attn = self.attention(q, k, v, mask=mask)
+            mask = torch.tensor(torch.cat((prefix_attention_mask, mask), dim=-1), dtype=torch.bool)
+
+            q = self.w_qs(q).view(sz_b, len_q, n_head, d_k).permute(2, 0, 1, 3).contiguous().view(-1, len_q, d_k)
+            len_k = key_states.size(2)
+            len_v = value_states.size(2)
+            k = key_states.permute(1,0,2,3).contiguous().view(-1, len_k, d_k)
+            v = value_states.permute(1,0,2,3).contiguous().view(-1, len_v, d_v)
+		
+            output, attn = self.attention(q, k, v, mask=mask)
+        else:
+
+            q = self.w_qs(q).view(sz_b, len_q, n_head, d_k)
+            k = self.w_ks(k).view(sz_b, len_k, n_head, d_k)
+            v = self.w_vs(v).view(sz_b, len_v, n_head, d_v)
+            q = q.permute(2, 0, 1, 3).contiguous().view(-1, len_q, d_k)  # (n*b) x lq x dk
+            k = k.permute(2, 0, 1, 3).contiguous().view(-1, len_k, d_k)  # (n*b) x lk x dk
+            v = v.permute(2, 0, 1, 3).contiguous().view(-1, len_v, d_v)  # (n*b) x lv x dv
+
+            mask = mask.repeat(n_head, 1, 1)  # (n*b) x .. x ..
+            output, attn = self.attention(q, k, v, mask=mask)
 
         output = output.view(n_head, sz_b, len_q, d_v)
         output = (

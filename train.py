@@ -23,7 +23,25 @@ from evaluate import evaluate
 
 torch.backends.cudnn.benchmark = True
 
-
+def freeze_exclude_praram(model):
+	for name, param in model.named_parameters():
+		if "adapter_block" in name:
+			pass
+		elif "layer_norm" in name:
+			pass
+		# elif "lora_A" in name:
+		# 	pass
+		# elif "lora_B" in name:
+		# 	pass
+		elif "prefix_encoder" in name:
+			pass
+		# elif "tiny_attn" in name:
+		# 	pass
+		# elif "tiny_conformer" in name:
+		# 	pass
+		else:
+			param.requires_grad = False
+   
 def train(rank, args, configs, batch_size, num_gpus):
     preprocess_config, model_config, train_config = configs
     if num_gpus > 1:
@@ -54,7 +72,12 @@ def train(rank, args, configs, batch_size, num_gpus):
 
     # Prepare model
     model, optimizer = get_model(args, configs, device, train=True)
-    print(model)
+    print("------>>> Trainable params(before freeze):", sum(p.numel() for p in model.parameters() if p.requires_grad))
+    if model_config["adapters"]["required"]:
+        freeze_exclude_praram(model)
+    print("------>>> Trainable params(after  freeze):", sum(p.numel() for p in model.parameters() if p.requires_grad))
+	# print(model)
+    # print(model)
     if num_gpus > 1:
         model = DistributedDataParallel(model, device_ids=[rank]).to(device)
     scaler = amp.GradScaler(enabled=args.use_amp)
