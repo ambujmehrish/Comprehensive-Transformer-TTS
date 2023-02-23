@@ -18,14 +18,14 @@ def get_model(args, configs, device, train=False):
             "{}.pth.tar".format(args.restore_step),
         )
         ckpt = torch.load(ckpt_path, map_location=device)
-        model.load_state_dict(ckpt["model"])
+        model.load_state_dict(ckpt["model"],strict=False)
 
     if train:
         scheduled_optim = ScheduledOptim(
-            model, train_config, model_config, args.restore_step
+            model, train_config, model_config, 0
         )
-        if args.restore_step:
-            scheduled_optim.load_state_dict(ckpt["optimizer"])
+        # if args.restore_step:
+        #     scheduled_optim.load_state_dict(ckpt["optimizer"],strict=False)
         model.train()
         return model, scheduled_optim
 

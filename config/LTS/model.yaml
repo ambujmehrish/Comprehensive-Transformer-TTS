@@ -105,7 +105,7 @@ vocoder:
 
 adapters:
   required: True
-  number_of_adapters: 10
+  number_of_adapters: 5
   c: 0.5
   r: 8
 
