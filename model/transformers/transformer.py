@@ -48,19 +48,19 @@ class TextEncoder(nn.Module):
         self.layer_stack = nn.ModuleList(
             [
                 FFTBlock(
-                    config, d_model, n_head, d_k, d_v, d_inner, kernel_size, dropout=dropout, module_type = "Encoder"
+                    config, d_model, n_head, d_k, d_v, d_inner, kernel_size, dropout=dropout, module_type = "Decoder"
                 )
                 for _ in range(n_layers)
             ]
         )
         self.config = config
-        if config['adapter']['prefix_tuning']:
+        if config['adapters']['prefix_tuning']['encoder']:
             self.num_heads = n_head
-            self.prefix_seq_len = self.config["adapter"]["prefix_seq_len"]
+            self.prefix_seq_len = self.config["adapters"]['prefix_tuning']["prefix_seq_len"]
             self.hidden_size = d_word_vec
             self.n_embd = self.hidden_size // self.num_heads
             self.prefix_tokens = torch.arange(self.prefix_seq_len).long()
-            self.prefix_dropout = torch.nn.Dropout(config["adapter"]["prefix_dropout_prob"])
+            self.prefix_dropout = torch.nn.Dropout(config["adapters"]['prefix_tuning']["prefix_dropout_prob"])
             self.num_layers = n_layers
             self.prefix_encoder = PrefixEncoder(config, num_hidden_layers=self.num_layers, hidden_size=self.hidden_size)
 
@@ -84,7 +84,7 @@ class TextEncoder(nn.Module):
 
         enc_slf_attn_list = []
         batch_size, max_len = src_seq.shape[0], src_seq.shape[1]
-        if self.config['adapter']['prefix_tuning']:
+        if self.config['adapters']['prefix_tuning']['encoder']:
             past_key_values=self.get_prefix_tuning(batch_size=batch_size)
         else:
             past_key_values=None
@@ -152,13 +152,13 @@ class Decoder(nn.Module):
         )
         
         self.config = config
-        if config['adapter']['prefix_tuning']:
+        if config['adapters']['prefix_tuning']["decoder"]:
             self.num_heads = n_head
-            self.prefix_seq_len = self.config["adapter"]["prefix_seq_len"]
+            self.prefix_seq_len = self.config["adapters"]['prefix_tuning']["prefix_seq_len"]
             self.hidden_size = d_word_vec
             self.n_embd = self.hidden_size // self.num_heads
             self.prefix_tokens = torch.arange(self.prefix_seq_len).long()
-            self.prefix_dropout = torch.nn.Dropout(config["adapter"]["prefix_dropout_prob"])
+            self.prefix_dropout = torch.nn.Dropout(config["adapters"]['prefix_tuning']["prefix_dropout_prob"])
             self.num_layers = n_layers
             self.prefix_encoder = PrefixEncoder(config, num_hidden_layers=self.num_layers, hidden_size=self.hidden_size)
         
@@ -182,7 +182,7 @@ class Decoder(nn.Module):
         dec_slf_attn_list = []
         batch_size, max_len = enc_seq.shape[0], enc_seq.shape[1]
         
-        if self.config['adapter']['prefix_tuning']:
+        if self.config['adapters']['prefix_tuning']["decoder"]:
             past_key_values=self.get_prefix_tuning(batch_size=batch_size)
         else:
             past_key_values=None
@@ -266,7 +266,10 @@ class MultiHeadAttention(nn.Module):
         self.fc = LinearNorm(n_head * d_v, d_model)
 
         self.dropout = nn.Dropout(dropout)
-
+    
+    def _shape(self, tensor: torch.Tensor, seq_len: int, bsz: int, dim: int):
+            return tensor.view(bsz, seq_len, self.n_head, dim).transpose(1, 2).contiguous()
+    
     def forward(self, q, k, v,speaker_embeds=None, mask=None,  past_key_values=None):
 
         d_k, d_v, n_head = self.d_k, self.d_v, self.n_head
@@ -276,15 +279,18 @@ class MultiHeadAttention(nn.Module):
         sz_b, len_v, _ = v.size()
 
         residual = q
+        
         batch_size = q.size(0)
+        
         if past_key_values is not None:
             mask = mask.repeat(n_head, 1, 1)
+            
             key_states = self._shape(self.w_ks(k), -1, batch_size, self.d_k)
             value_states = self._shape(self.w_vs(v), -1, batch_size, self.d_v)
             key_states = torch.cat([past_key_values[0], key_states], dim=2)
             value_states = torch.cat([past_key_values[1], value_states], dim=2)
 
-            prefix_attention_mask = torch.ones(batch_size, self.config['adapter']['prefix_seq_len']).to(mask.device)
+            prefix_attention_mask = torch.ones(batch_size, self.config['adapters']['prefix_tuning']['prefix_seq_len']).to(mask.device)
             prefix_attention_mask = 1.0 - prefix_attention_mask
             prefix_attention_mask = prefix_attention_mask[:, None, :].repeat(n_head, mask.size(-1), 1)
 

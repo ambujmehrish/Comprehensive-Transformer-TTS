@@ -4,9 +4,9 @@ dist_config:
   dist_url: "tcp://localhost:54321"
   world_size: 1
 path:
-  ckpt_path: "./output/ckpt/VCTK"
-  log_path: "./output/log/VCTK"
-  result_path: "./output/result/VCTK"
+  ckpt_path: "/data/yingting/InterSpeech/10/output/ckpt/VCTK"
+  log_path: "/data/yingting/InterSpeech/10/output/log/VCTK"
+  result_path: "/data/yingting/InterSpeech/10/output/result/VCTK"
 optimizer:
   batch_size: 16
   betas: [0.9, 0.98]

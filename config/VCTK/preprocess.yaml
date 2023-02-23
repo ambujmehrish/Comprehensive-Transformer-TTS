@@ -6,8 +6,8 @@ path:
   wav_dir: "wav48"
   txt_dir: "txt"
   lexicon_path: "lexicon/librispeech-lexicon.txt"
-  raw_path: "./raw_data/VCTK"
-  preprocessed_path: "./preprocessed_data/VCTK"
+  raw_path: "/home/yingting/Comprehensive-Transformer-TTS/raw_data/VCTK"
+  preprocessed_path: "/home/yingting/Comprehensive-Transformer-TTS/preprocessed_data/VCTK"
 
 preprocessing:
   speaker_embedder: "DeepSpeaker" # support 'none', 'DeepSpeaker'

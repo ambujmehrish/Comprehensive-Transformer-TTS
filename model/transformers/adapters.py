@@ -18,7 +18,7 @@ class PrefixEncoder(nn.Module):
 	'''
 	def __init__(self, config, num_hidden_layers, hidden_size):
 		super().__init__()
-		self.prefix_projection = config["adapter"]["prefix_projection"]
+		self.prefix_projection = config["adapters"]['prefix_tuning']["prefix_projection"]
 		if self.prefix_projection:
 			# Use a two-layer MLP to encode the prefix
 			self.embedding = torch.nn.Embedding(config.prefix_seq_len, config.hidden_size)
@@ -29,7 +29,7 @@ class PrefixEncoder(nn.Module):
 			)
 		else:
 			# self.embedding = torch.nn.Embedding(config["adapter"]["prefix_seq_len"], config.num_hidden_layers * 2 * config.hidden_size)
-			self.embedding = torch.nn.Embedding(config["adapter"]["prefix_seq_len"], num_hidden_layers * 2 * hidden_size)
+			self.embedding = torch.nn.Embedding(config["adapters"]['prefix_tuning']["prefix_seq_len"], num_hidden_layers * 2 * hidden_size)
 
 	def forward(self, prefix: torch.Tensor):
 		if self.prefix_projection:

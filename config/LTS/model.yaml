@@ -104,6 +104,13 @@ vocoder:
   speaker: "universal" # support  'LJSpeech', 'universal'
 
 adapters:
+  prefix_tuning:
+    encoder: False
+    decoder: False
+    prefix_projection: False
+    prefix_seq_len: 30
+    prefix_dropout_prob: 0.1
+
   required: True
   number_of_adapters: 5
   c: 0.5

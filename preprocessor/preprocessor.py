@@ -186,9 +186,11 @@ class Preprocessor:
                     if ".wav" not in wav_name:
                         continue
 
-                    basename = wav_name.split(".")[0]
+                    basename_ = wav_name.split(".")[0]
+                    basename = "_".join(basename_.split("_")[1:])
+                    chapter_name = basename_.split("_")[1]
                     tg_path = os.path.join(
-                        self.out_dir, "TextGrid", speaker, "{}.TextGrid".format(basename)
+                        self.out_dir, "TextGrid", speaker, chapter_name, "{}_{}.TextGrid".format(speaker,basename)
                     )
                     (
                         info_unsup,
@@ -305,12 +307,12 @@ class Preprocessor:
             )
         )
 
-        if self.speaker_emb is not None:
-            print("Plot speaker embedding...")
-            plot_embedding(
-                self.out_dir, *self.load_embedding(embedding_dir),
-                self.divide_speaker_by_gender(self.corpus_dir), filename="spker_embed_tsne.png"
-            )
+        # if self.speaker_emb is not None:
+        #     print("Plot speaker embedding...")
+        #     plot_embedding(
+        #         self.out_dir, *self.load_embedding(embedding_dir),
+        #         self.divide_speaker_by_gender(self.corpus_dir), filename="spker_embed_tsne.png"
+        #     )
 
         # Save dataset
         filtered_out_unsup, filtered_out_sup = list(filtered_out_unsup), list(filtered_out_sup)
@@ -369,8 +371,8 @@ class Preprocessor:
 
     def process_utterance(self, tg_path, speaker, basename, save_speaker_emb):
         sup_out_exist, unsup_out_exist = True, True
-        wav_path = os.path.join(self.in_dir, speaker, "{}.wav".format(basename))
-        text_path = os.path.join(self.in_dir, speaker, "{}.lab".format(basename))
+        wav_path = os.path.join(self.in_dir, speaker, "{}_{}.wav".format(speaker,basename))
+        text_path = os.path.join(self.in_dir, speaker, "{}_{}.lab".format(speaker,basename))
 
         wav_raw, wav, duration = self.load_audio(wav_path)
         spker_embed = self.speaker_emb(wav) if save_speaker_emb else None
@@ -640,15 +642,15 @@ class Preprocessor:
 
         return min_value, max_value
 
-    def divide_speaker_by_gender(self, in_dir, speaker_path="speaker-info.txt"):
-        speakers = dict()
-        with open(os.path.join(in_dir, speaker_path), encoding='utf-8') as f:
-            for line in tqdm(f):
-                if "ID" in line: continue
-                parts = [p.strip() for p in re.sub(' +', ' ',(line.strip())).split(' ')]
-                spk_id, gender = parts[0], parts[2]
-                speakers[str(spk_id)] = gender
-        return speakers
+    # def divide_speaker_by_gender(self, in_dir, speaker_path="speaker-info.txt"):
+    #     speakers = dict()
+    #     with open(os.path.join(in_dir, speaker_path), encoding='utf-8') as f:
+    #         for line in tqdm(f):
+    #             if "ID" in line: continue
+    #             parts = [p.strip() for p in re.sub(' +', ' ',(line.strip())).split(' ')]
+    #             spk_id, gender = parts[0], parts[2]
+    #             speakers[str(spk_id)] = gender
+    #     return speakers
 
     def load_embedding(self, embedding_dir):
         embedding_path_list = [_ for _ in Path(embedding_dir).rglob('*.npy')]

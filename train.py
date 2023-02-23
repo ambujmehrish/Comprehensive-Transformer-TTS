@@ -76,8 +76,8 @@ def train(rank, args, configs, batch_size, num_gpus):
     if model_config["adapters"]["required"]:
         freeze_exclude_praram(model)
     print("------>>> Trainable params(after  freeze):", sum(p.numel() for p in model.parameters() if p.requires_grad))
-	# print(model)
     # print(model)
+    print(model)
     if num_gpus > 1:
         model = DistributedDataParallel(model, device_ids=[rank]).to(device)
     scaler = amp.GradScaler(enabled=args.use_amp)
