@@ -395,28 +395,32 @@ class MOA(nn.Module):
     def __init__(self,
                  number_of_adapters,
                  d_in,
-                 k,
+                 c,
                  r):
         super(MOA,self).__init__()
         self.number_of_adapters = number_of_adapters
         self.d_in = d_in
-        self.k = k
+        self.c = c
         self.r = r
         self.W_g = nn.Linear(self.d_in,self.number_of_adapters)
         self.adapters = nn.ModuleList([ResidualAdapter("residual_adapter",self.d_in,self.r) for i in range(number_of_adapters)])
         
     def forward(self,x):
+        _,n,_ = x.shape
         # x --> B,T,d
         X = self.W_g(x) # X----> B,T,e
         S = nn.Softmax(X) # -----> B,T,e
-        G,I = torch.topk(S.T,self.k)# G ---> B,e,k
-        P = F.one_hot(I) #  P ---> B,e,k,T
-        X_in = torch.einsum('bijk,bkl->bijl',P.float(),X)
+        # Computer k
+        k = int((n*self.c)/self.number_of_adapters)
+        G,I = torch.topk(torch.transpose(S.dim,1,2),k)# G ---> B,e,k
+        P = F.one_hot(I,num_classes=n) #  P ---> B,e,k,T
+        X_in = torch.einsum('bijk,bkl->bijl',P.float(),x)
         X_in = torch.transpose(X_in,0,1)
-        for i,l in enumerate(self.adapters):
-            X_e[i] =  self.adapters(x =X_in[i],residual_input = X_in[i])
+        X_e = torch.zeros(X_in.shape,device=X_in.device)
+        for i,layer in enumerate(self.adapters):
+            X_e[i] =  layer(X_in[i],X_in[i])
         X_e = torch.transpose(X_e,0,1)
-        X_out = torch.einsum('bijl,bij,bijd->bls',P.float(),G,X_e)
+        X_out = torch.einsum('bijl,bij,bijd->bld',P.float(),G,X_e)
         return X_out
         
         

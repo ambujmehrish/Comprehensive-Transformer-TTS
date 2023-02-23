@@ -54,6 +54,7 @@ def train(rank, args, configs, batch_size, num_gpus):
 
     # Prepare model
     model, optimizer = get_model(args, configs, device, train=True)
+    print(model)
     if num_gpus > 1:
         model = DistributedDataParallel(model, device_ids=[rank]).to(device)
     scaler = amp.GradScaler(enabled=args.use_amp)

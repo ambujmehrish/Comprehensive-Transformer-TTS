@@ -4,9 +4,9 @@ dist_config:
   dist_url: "tcp://localhost:54321"
   world_size: 1
 path:
-  ckpt_path: "/data/yingting/CLN/output/ckpt/LTS/lts_transformer/lts_finetune"
-  log_path: "/data/yingting/CLN/output/log/LTS/lts_transformer/lts_finetune"
-  result_path: "/data/yingting/CLN/output/result/LTS/lts_transformer/lts_finetune"
+  ckpt_path: "/data/yingting/Adapter/output/ckpt/LTS/lts_transformer/lts_finetune"
+  log_path: "/data/yingting/Adapter/output/log/LTS/lts_transformer/lts_finetune"
+  result_path: "/data/yingting/Adapter/output/result/LTS/lts_transformer/lts_finetune"
 optimizer:
   batch_size: 16
   betas: [0.9, 0.98]

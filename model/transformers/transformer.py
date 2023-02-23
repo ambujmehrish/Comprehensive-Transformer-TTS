@@ -266,6 +266,7 @@ class PositionwiseFeedForward(nn.Module):
     def __init__(self, config, d_in, d_hid, kernel_size, dropout=0.1,module_type = "Decoder"):
         super(PositionwiseFeedForward, self).__init__()
         self.module_type = module_type
+        self.d_model = config["transformer"]["decoder_hidden"]
         # Use Conv1D
         # position-wise
         self.w_1 = nn.Conv1d(
@@ -282,12 +283,12 @@ class PositionwiseFeedForward(nn.Module):
             padding=(kernel_size[1] - 1) // 2,
         )
         # Configuration for Mixture of Adapters
-        self.adapter = config["adapters"]["required"]
-        if self.adapter and self.module_type == "Decoder":
+        self.adapter_required = config["adapters"]["required"]
+        if self.adapter_required and self.module_type == "Decoder":
             self.number_of_adapters = config["adapters"]["number_of_adapters"]
-            self.k = config["adapters"]["k"]
+            self.c = config["adapters"]["c"]
             self.r = config["adapters"]["r"]
-            self.adapter_block = MOA(self.number_of_adapters,self.d_model,self.k,self.r)
+            self.adapter_block = MOA(self.number_of_adapters,self.d_model,self.c,self.r)
 
         # self.layer_norm = nn.LayerNorm(d_in)
         self.layer_norm = Condional_LayerNorm(d_in)
@@ -298,8 +299,8 @@ class PositionwiseFeedForward(nn.Module):
         output = x.transpose(1, 2)
         output = self.w_2(F.relu(self.w_1(output)))
         output = output.transpose(1, 2)
-        if self.adapter and self.module_type == "Decoder":
-            output = self.adapter(output)
+        if self.adapter_required and self.module_type == "Decoder":
+            output = self.adapter_block(output)
         output = self.dropout(output)
         output = self.layer_norm(output + residual,speaker_embeds)
 

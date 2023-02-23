@@ -103,7 +103,12 @@ vocoder:
   model: "HiFi-GAN" # support 'HiFi-GAN', 'MelGAN'
   speaker: "universal" # support  'LJSpeech', 'universal'
 
-# adapter:
+adapters:
+  required: True
+  number_of_adapters: 10
+  c: 0.5
+  r: 8
+
 #   # fine-tune
 #   fine_tune: False
 #   # prefix_tuning

@@ -7,7 +7,7 @@ path:
   txt_dir: "train-clean-100"
   lexicon_path: "lexicon/librispeech-lexicon.txt"
   raw_path: "./raw_data/LTS"
-  preprocessed_path: "./preprocessed_data/LTS"
+  preprocessed_path: "/home/yingting/interspeech/preprocessed_data/LTS"
 
 preprocessing:
   speaker_embedder: "DeepSpeaker" # support 'none', 'DeepSpeaker'
