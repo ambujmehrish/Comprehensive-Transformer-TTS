@@ -10,6 +10,7 @@ from .blocks import (
     get_sinusoid_encoding_table,
     LinearNorm,
     Condional_LayerNorm,
+    MOA,
 )
 
 
@@ -48,7 +49,7 @@ class TextEncoder(nn.Module):
         self.layer_stack = nn.ModuleList(
             [
                 FFTBlock(
-                    d_model, n_head, d_k, d_v, d_inner, kernel_size, dropout=dropout
+                    config, d_model, n_head, d_k, d_v, d_inner, kernel_size, dropout=dropout, module_type = "Encoder"
                 )
                 for _ in range(n_layers)
             ]
@@ -115,7 +116,7 @@ class Decoder(nn.Module):
         self.layer_stack = nn.ModuleList(
             [
                 FFTBlock(
-                    d_model, n_head, d_k, d_v, d_inner, kernel_size, dropout=dropout
+                    config, d_model, n_head, d_k, d_v, d_inner, kernel_size, dropout=dropout, module_type = "Decoder"
                 )
                 for _ in range(n_layers)
             ]
@@ -150,6 +151,7 @@ class Decoder(nn.Module):
             dec_output, dec_slf_attn = dec_layer(
                 dec_output, mask=mask,speaker_embeds= speaker_embeds, slf_attn_mask=slf_attn_mask
             )
+            
             if return_attns:
                 dec_slf_attn_list += [dec_slf_attn]
 
@@ -159,12 +161,14 @@ class Decoder(nn.Module):
 class FFTBlock(nn.Module):
     """ FFT Block """
 
-    def __init__(self, d_model, n_head, d_k, d_v, d_inner, kernel_size, dropout=0.1):
+    def __init__(self, config, d_model, n_head, d_k, d_v, d_inner, kernel_size, dropout=0.1, module_type = "Decoder"):
         super(FFTBlock, self).__init__()
+        self.module_type = module_type
         self.slf_attn = MultiHeadAttention(n_head, d_model, d_k, d_v, dropout=dropout)
         self.pos_ffn = PositionwiseFeedForward(
-            d_model, d_inner, kernel_size, dropout=dropout
+           config, d_model, d_inner, kernel_size, dropout=dropout, module_type = self.module_type
         )
+        # self.config = config 
 
     def forward(self, enc_input, mask=None,speaker_embeds=None, slf_attn_mask=None):
         enc_output, enc_slf_attn = self.slf_attn(
@@ -259,9 +263,9 @@ class ScaledDotProductAttention(nn.Module):
 class PositionwiseFeedForward(nn.Module):
     """ A two-feed-forward-layer """
 
-    def __init__(self, d_in, d_hid, kernel_size, dropout=0.1):
+    def __init__(self, config, d_in, d_hid, kernel_size, dropout=0.1,module_type = "Decoder"):
         super(PositionwiseFeedForward, self).__init__()
-
+        self.module_type = module_type
         # Use Conv1D
         # position-wise
         self.w_1 = nn.Conv1d(
@@ -277,6 +281,13 @@ class PositionwiseFeedForward(nn.Module):
             kernel_size=kernel_size[1],
             padding=(kernel_size[1] - 1) // 2,
         )
+        # Configuration for Mixture of Adapters
+        self.adapter = config["adapters"]["required"]
+        if self.adapter and self.module_type == "Decoder":
+            self.number_of_adapters = config["adapters"]["number_of_adapters"]
+            self.k = config["adapters"]["k"]
+            self.r = config["adapters"]["r"]
+            self.adapter_block = MOA(self.number_of_adapters,self.d_model,self.k,self.r)
 
         # self.layer_norm = nn.LayerNorm(d_in)
         self.layer_norm = Condional_LayerNorm(d_in)
@@ -287,6 +298,8 @@ class PositionwiseFeedForward(nn.Module):
         output = x.transpose(1, 2)
         output = self.w_2(F.relu(self.w_1(output)))
         output = output.transpose(1, 2)
+        if self.adapter and self.module_type == "Decoder":
+            output = self.adapter(output)
         output = self.dropout(output)
         output = self.layer_norm(output + residual,speaker_embeds)
 
