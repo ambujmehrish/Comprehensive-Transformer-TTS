@@ -5,6 +5,8 @@ from torch.nn import functional as F
 import math
 
 from utils.tools import make_positions
+from transformers.adapters.modeling import Adapter
+from transformers.adapters import AdapterConfig, CompacterConfig, PrefixTuningConfig
 
 
 def Embedding(num_embeddings, embedding_dim, padding_idx=None):
@@ -379,17 +381,45 @@ class Condional_LayerNorm(nn.Module):
         y += bias.unsqueeze(1)
 
         return y
+    
+class ResidualAdapter(nn.Module):
+	def __init__(self, adapter_name, input_size, down_sample):
+		super(ResidualAdapter, self).__init__()
+		self.config = AdapterConfig(mh_adapter=True, output_adapter=True, reduction_factor=16, non_linearity="relu")
+		self.residual_adapter = Adapter(adapter_name, input_size=input_size, down_sample=down_sample, config=self.config)
+	def forward(self, x, residual_input):
+		output, down, up = self.residual_adapter(x, residual_input)
+		return output
 
 class MOA(nn.Module):
     def __init__(self,
                  number_of_adapters,
-                 d_in):
+                 d_in,
+                 k,
+                 r):
         super(MOA,self).__init__()
         self.number_of_adapters = number_of_adapters
         self.d_in = d_in
+        self.k = k
+        self.r = r
         self.W_g = nn.Linear(self.d_in,self.number_of_adapters)
-        
+        self.adapters = nn.ModuleList([ResidualAdapter("residual_adapter",self.d_in,self.r) for i in range(number_of_adapters)])
         
     def forward(self,x):
+        # x --> B,T,d
+        X = self.W_g(x) # X----> B,T,e
+        S = nn.Softmax(X) # -----> B,T,e
+        G,I = torch.topk(S.T,self.k)# G ---> B,e,k
+        P = F.one_hot(I) #  P ---> B,e,k,T
+        X_in = torch.einsum('bijk,bkl->bijl',P.float(),X)
+        X_in = torch.transpose(X_in,0,1)
+        for i,l in enumerate(self.adapters):
+            X_e[i] =  self.adapters(x =X_in[i],residual_input = X_in[i])
+        X_e = torch.transpose(X_e,0,1)
+        X_out = torch.einsum('bijl,bij,bijd->bls',P.float(),G,X_e)
+        return X_out
+        
+        
+        
         
         
