@@ -99,7 +99,7 @@ vocoder:
 
 adapters:
   prefix_tuning:
-    encoder: False
+    encoder: True
     decoder: False
     prefix_projection: False
     prefix_seq_len: 30
@@ -107,7 +107,7 @@ adapters:
 
   required: True
   finetune: True
-  adapter_block_type: "RA"
+  adapter_block_type: "MOA"
   number_of_adapters: 10
   c: 0.80
   r: 64

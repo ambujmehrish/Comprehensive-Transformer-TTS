@@ -261,6 +261,7 @@ class MultiHeadAttention(nn.Module):
         self.n_head = n_head
         self.d_k = d_k
         self.d_v = d_v
+        self.config = config
         self.conditional_layer_norm = config["transformer"]["conditional_layer_norm"]
 
         self.w_qs = LinearNorm(d_model, n_head * d_k)
