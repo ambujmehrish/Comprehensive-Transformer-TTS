@@ -15,7 +15,7 @@ from tqdm import tqdm
 # hop_length = 256
 number_of_speakers = 10
 dataset_name = "VCTK"
-max_train_duration = 600
+max_train_duration = 10
 max_val_duration = 60
 out_dir = f"./Subsample/{dataset_name}"
 # def load_audio(wav_path):

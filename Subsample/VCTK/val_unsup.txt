@@ -1,144 +1,149 @@
-p301-028|p301|{DH AH0 L AO1 HH AE1 Z G AA1 T T UW1 B IY1 AH0 P HH EH1 L D sp}|the law has got to be upheld.
-p301-348|p301|{HH IY1 D IH1 D N AA1 T AH0 P OW1 Z DH AH0 D IH0 V AO1 R S sp}|he did not oppose the divorce.
-p306-126|p306|{DH EH1 R IH1 Z AH0 L AE1 K AH1 V K EH1 M AH0 S T R IY0 sp}|there is a lack of chemistry.
-p300-254|p300|{P IY1 P AH0 L W UH1 D S EY1 sp HH IY1 TH IH1 NG K S HH IY1 K AE1 N D UW1 DH AE1 T AE1 Z W EH1 L sp}|people would say, he thinks he can do that as well.
-p330-164|p330|{SH UH1 R DH AH0 K OW1 IH1 Z AH0 K R AE1 K IH0 NG B AE1 N D sp}|sure the coe is a cracking band.
-p330-040|p330|{TH AW1 Z AH0 N D Z AH1 V HH OW1 M Z W ER0 L EH1 F T W IH0 TH AW1 T P AW1 ER0 S AH0 P L AY1 Z sp}|thousands of homes were left without power supplies.
-p300-216|p300|{JH IH1 M IY0 R IH0 T ER1 N D T UW1 AE1 B ER0 D IY2 N sp B AH1 T SH IY1 R IH0 M EY1 N D W IH1 DH JH AO1 R JH sp}|jimmy returned to aberdeen, but she remained with george.
-p238-350|p238|{W AH1 T K AY1 N D AH1 V M AE1 N D AH1 Z DH AE1 T sp M IH1 S T ER0 D IH1 K sp}|what kind of man does that, mr dick?
-p300-032|p300|{DH AH0 M Y UW1 Z IH0 K IH1 N D AH0 S T R IY0 HH AE1 Z AH0 N T CH EY1 N JH D AE1 T AO1 L sp}|the music industry hasn't changed at all.
-p298-166|p298|{HH IH1 L ER0 IY0 P L AE1 N Z T UW1 M IY1 T HH IH1 M AA1 N DH AH0 S AH1 M AH0 T sp}|hillary plans to meet him on the summit.
-p300-258|p300|{T AH0 D EY1 Z M IY1 T IH0 NG W AA1 Z OW1 P AH0 N AH0 N D F R EH1 N D L IY0 sp}|today's meeting was open and friendly.
-p307-208|p307|{W IY1 HH AE1 V N OW1 CH OY1 S B AH1 T T UW1 SH AH1 T D AW1 N sp}|we have no choice but to shut down.
-p264-127|p264|{W IY1 HH AE1 V AH0 T IY1 M T UW1 R IY1 CH DH AH0 F AY1 N AH0 L sp}|we have a team to reach the final.
-p330-186|p330|{AY1 TH IH1 NG K IH1 T AH0 L B IY1 AH0 G R EY1 T AH0 K EY1 ZH AH0 N sp}|i think it'll be a great occasion.
-p238-208|p238|{DH AH0 R IY1 F AH2 N D IH1 Z F UH1 L IY0 JH AH1 S T AH0 F AY2 D sp}|the refund is fully justified.
-p330-241|p330|{W IY1 HH AE1 V T UW1 K AA1 N S AH0 N T R EY2 T AA1 N TH R IY1 P OY1 N T S T AH0 M AA1 R OW2 sp}|we have to concentrate on three points tomorrow.
-p264-286|p264|{DH AH0 IH1 N S T AH0 T UW2 T B AO1 R D W IH1 L T EY1 K DH AH0 D IH0 S IH1 ZH AH0 N sp}|the institute board will take the decision.
-p306-005|p306|{SH IY1 K AE1 N S K UW1 P DH IY1 Z TH IH1 NG Z IH0 N T UW1 TH R IY1 R EH1 D B AE1 G Z sp AH0 N D W IY1 W IH1 L G OW1 M IY1 T HH ER0 W EH1 N Z D IY0 AE1 T DH AH0 T R EY1 N S T EY1 SH AH0 N sp}|she can scoop these things into three red bags, and we will go meet her wednesday at the train station.
-p298-013|p298|{S AH1 M HH AE1 V AE0 K S EH1 P T IH0 D IH1 T AE1 Z AH0 M IH1 R AH0 K AH0 L W IH0 TH AW1 T F IH1 Z IH0 K AH0 L EH2 K S P L AH0 N EY1 SH AH0 N sp}|some have accepted it as a miracle without physical explanation.
-p306-184|p306|{W IY1 B IH0 L IY1 V AH0 TH ER1 D P AA1 R T IY0 W AA1 Z IH0 N V AA1 L V D sp}|we believe a third party was involved.
-p293-169|p293|{AY1 JH AH1 S T W AA1 N T T UW1 EH0 N JH OY1 M AY2 S EH1 L F sp}|i just want to enjoy myself.
-p330-227|p330|{S AH1 D AH0 N L IY0 sp DH AH0 R AH1 G B IY0 W ER1 L D HH AE1 D CH EY1 N JH D sp}|suddenly, the rugby world had changed.
-p238-437|p238|{W IY1 AA1 R EY1 M IH0 NG F AO1 R ER1 L IY0 M AA1 R CH sp}|we are aiming for early march.
-p264-297|p264|{AO1 T AH0 M W IH1 L B IY1 AH0 R IY1 L CH AE1 L AH0 N JH sp}|autumn will be a real challenge.
-p274-163|p274|{OW1 V ER0 AO2 L sp DH AH0 L EY1 B AW2 R M AA1 R K AH0 T K AH0 N T IH1 N Y UW0 D T UW1 T AY1 T AH0 N sp}|overall, the labour market continued to tighten.
-p301-136|p301|{AY1 W UH1 D AE1 S K DH AH0 F AE1 N Z T UW1 B IY1 P EY1 SH AH0 N T sp}|i would ask the fans to be patient.
-p293-207|p293|{HH IY1 W AA1 Z AO1 L S OW0 M EH1 R IY0 D W IH1 DH T UW1 CH IH1 L D R AH0 N sp}|he was also married with two children.
-p264-324|p264|{DH EY1 R IH1 L IY0 HH AE1 D AH0 G OW1 AE1 T AH1 S sp}|they really had a go at us.
-p300-069|p300|{DH EH1 R F AO2 R sp IH1 T IH1 Z AH0 N T G EH1 T IH0 NG DH AH0 R IH0 S P EH1 K T IH1 T D IH0 Z ER1 V Z sp}|therefore, it isn't getting the respect it deserves.
-p306-181|p306|{IH1 T W AA1 Z IH0 K S T R IY1 M L IY0 F UW1 L IH0 SH B IH0 HH EY1 V Y ER0 AA1 N Y AO1 R P AA1 R T sp}|it was extremely foolish behaviour on your part.
-p293-029|p293|{S AH1 B Z N AA1 T Y UW1 Z D sp M AH0 K AH1 L AH0 K sp}|subs not used, mcculloch.
-p274-325|p274|{HH AE1 D DH IH1 S B IH1 N K AA1 M AH0 N P R AE1 K T AH0 S sp}|had this been common practice?
-p307-042|p307|{AY1 HH AE1 V P L EY1 D R IH1 L IY0 W EH1 L AO1 L Y IH1 R sp}|i have played really well all year.
-p264-049|p264|{AY1 OW1 N L IY0 S AY1 N D DH IH1 S M AO1 R N IH0 NG sp}|i only signed this morning.
-p300-345|p300|{S OW1 W IY1 SH AE1 L R IH0 M EY1 N V IH1 JH AH0 L AH0 N T sp AH0 N D K IY1 P DH AH0 P R EH1 SH ER0 AA1 N HH IH1 M sp}|so we shall remain vigilant, and keep the pressure on him.
-p274-429|p274|{AY1 N EH1 V ER0 HH AE1 D AH0 CH AY1 L D HH UH2 D sp}|i never had a childhood.
-p264-446|p264|{DH AH0 TH R IY1 P R IY1 V IY0 AH0 S W IH1 N ER0 Z AO1 L S OW0 K EY1 M F R AH1 M S K AA1 T L AH0 N D sp}|the three previous winners also came from scotland.
-p238-060|p238|{W EH1 L sp HH IY1 IH1 Z AE1 N AA1 R T AH0 S T sp}|well, he is an artist.
-p306-193|p306|{Y UW1 L UH1 K AE1 T DH EH1 M AH0 N D Y UW1 AH2 N D ER0 S T AE1 N D sp}|you look at them and you understand.
-p264-303|p264|{IH1 T W AA1 Z F AY1 N AH0 L IY0 AH0 G R IY1 D AA1 N S AE1 T ER0 D IY0 sp}|it was finally agreed on saturday.
-p307-021|p307|{DH AH0 D IH1 F ER0 AH0 N S IH0 N DH AH0 R EY1 N B OW2 D IH0 P EH1 N D Z K AH0 N S IH1 D ER0 AH0 B L IY0 AH0 P AA1 N DH AH0 S AY1 Z AH1 V DH AH0 D R AA1 P S sp AH0 N D DH AH0 W IH1 D TH AH1 V DH AH0 K AH1 L ER0 D B AE1 N D IH1 N K R IY2 S IH0 Z AE1 Z DH AH0 S AY1 Z AH1 V DH AH0 D R AA1 P S IH1 N K R IY2 S IH0 Z sp}|the difference in the rainbow depends considerably upon the size of the drops, and the width of the colored band increases as the size of the drops increases.
-p238-065|p238|{W IY1 HH AE1 D AH0 N T R IH1 L IY0 T EY1 K AH0 N DH AE1 T S IH1 R IY0 AH0 S L IY0 B IH0 F AO1 R sp}|we hadn't really taken that seriously before.
-p298-350|p298|{P IY1 P AH0 L T EH1 N D AH0 D T UW1 S T EY1 DH EH1 R F AO1 R S AH1 M T AY1 M sp}|people tended to stay there for some time.
-p264-100|p264|{HH IH1 Z M AE1 S IH0 V AE0 D V AE1 N T IH0 JH W AA1 Z N EH1 V ER0 AH1 N D ER0 TH R EH1 T Y EH1 S T ER0 D EY2 sp}|his massive advantage was never under threat yesterday.
-p274-464|p274|{DH EH1 N K EY1 M DH AH0 F EH2 R W EH1 L T UW1 Y UH1 R AH0 P sp}|then came the farewell to europe.
-p330-229|p330|{AY1 V G AA1 T N OW1 S IY1 K R AH0 T sp}|i've got no secret.
-p298-220|p298|{Y UW1 N OW1 sp HH IY1 W AA1 Z S T R AH1 G AH0 L IH0 NG W IH1 DH HH IH1 Z G EY1 M AO1 L W IY1 K sp}|you know, he was struggling with his game all week.
-p298-123|p298|{IH0 N DH AE1 T K EY1 S sp W IY1 W UH1 D B IY1 P R IY0 P EH1 R D T UW1 D IH0 F EH1 N D AW0 ER0 S EH1 L V Z sp}|in that case, we would be prepared to defend ourselves.
-p274-247|p274|{DH EH1 R W ER0 N OW1 R IH0 P AO1 R T S AH1 V K AE1 ZH AH0 W AH0 L T IY0 Z sp}|there were no reports of casualties.
-p238-302|p238|{W AH1 T AA1 R Y UW1 N AA1 T G UH1 D AE1 T sp}|what are you not good at?
-p298-080|p298|{AY1 W AA1 Z AH2 N K AA1 N SH AH0 S F AO1 R T UW1 AO1 R TH R IY1 S EH1 K AH0 N D Z sp}|i was unconscious for two or three seconds.
-p264-357|p264|{N IY1 L N OW1 Z DH AH0 S K AO1 R sp}|neil knows the score.
-p293-278|p293|{DH IH1 S AE1 V AH0 L AE2 N CH IH1 Z JH AH1 S T B IH0 G IH1 N IH0 NG sp}|this avalanche is just beginning.
-p307-119|p307|{IH1 T IH1 Z N AA1 T G R EY1 T AA1 R T sp}|it is not great art.
-p330-015|p330|{DH AH0 G R IY1 K S Y UW1 Z D T UW1 IH0 M AE1 JH AH0 N DH AE1 T IH1 T W AA1 Z AH0 S AY1 N F R AH1 M DH AH0 G AA1 D Z T UW1 F AO0 R T EH1 L W AO1 R AO1 R HH EH1 V IY0 R EY1 N sp}|the greeks used to imagine that it was a sign from the gods to foretell war or heavy rain.
-p293-143|p293|{DH AH0 P R AH0 P OW1 Z AH0 L Z W ER0 N EH1 V ER0 T EY1 K AH0 N S IH1 R IY0 AH0 S L IY0 sp}|the proposals were never taken seriously.
-p293-361|p293|{F AO1 R S AH1 M sp IH1 T M AY1 T N AA1 T M EY1 K T UW1 M AH1 CH D IH1 F ER0 AH0 N S sp}|for some, it might not make too much difference.
-p307-134|p307|{N OW1 sp W AH1 N sp HH AW2 EH1 V ER0 sp W AA1 Z K AH0 M P L EY1 S AH0 N T AH0 B AW1 T DH AH0 S AY1 Z AH1 V DH AH0 T AE1 S K sp}|no-one, however, was complacent about the size of the task.
-p293-295|p293|{K AH0 N S T R AH1 K SH AH0 N IH1 Z D UW1 T UW1 B IH0 G IH1 N IH0 N F EH1 B Y AH0 W EH2 R IY0 sp}|construction is due to begin in february.
-p264-227|p264|{AY1 W AA1 Z IH0 N D EY1 L IY0 K AA1 N T AE2 K T sp}|i was in daily contact.
-p238-407|p238|{AH0 N D IH1 T HH AE1 D T UW1 S IY1 T S sp}|and it had two seats.
-p264-301|p264|{DH AH0 D ER0 EH1 K T IH0 F EH1 K T S AA1 N T R EY1 D W IH1 L B IY1 L IH1 M AH0 T AH0 D sp}|the direct effects on trade will be limited.
-p330-311|p330|{HH IY1 W IH1 L D UW1 V EH1 R IY0 W EH1 L sp}|he will do very well.
-p301-213|p301|{AY1 W UH1 D N AA1 T W AA1 N T T UW1 B IY1 Y AH1 NG AH0 G EH1 N sp}|i would not want to be young again.
-p264-257|p264|{W IY1 HH AE1 D AH0 R AY1 T T UW1 IH0 K S P EH1 K T DH OW1 Z D EY1 Z W ER0 OW1 V ER0 sp}|we had a right to expect those days were over.
-p300-160|p300|{SH IY1 K AH0 L AE1 P S T AH0 N D D AY1 D AH0 D EY1 L EY1 T ER0 sp}|she collapsed and died a day later.
-p298-067|p298|{M OW1 S T P IY1 P AH0 L N OW1 DH AE1 T sp}|most people know that.
-p293-011|p293|{W EH1 N AH0 M AE1 N L UH1 K S F AO1 R S AH1 M TH IH0 NG B IH0 AA1 N D HH IH1 Z R IY1 CH sp HH IH1 Z F R EH1 N D Z S EY1 HH IY1 Z L UH1 K IH0 NG F AO1 R DH AH0 P AA1 T AH1 V G OW1 L D AE1 T DH AH0 EH1 N D AH1 V DH AH0 R EY1 N B OW2 sp}|when a man looks for something beyond his reach, his friends say he's looking for the pot of gold at the end of the rainbow.
-p264-216|p264|{HH EH1 N R IY0 SH UH1 D G OW1 N AW1 sp}|henry should go now.
-p301-050|p301|{DH EH1 R W IH1 L B IY1 P L EH1 N T IY0 T UW1 K IY1 P DH EH1 M AA1 K Y AH0 P AY2 D sp}|there will be plenty to keep them occupied.
-p293-111|p293|{L UH1 K AE1 T HH IH1 Z L AE1 S T K AH1 P AH0 L AH1 V R EH1 K ER0 D Z sp}|look at his last couple of records.
-p306-315|p306|{AH0 G R EY1 T D IY1 L HH AE1 Z B IH1 N AH0 CH IY1 V D sp}|a great deal has been achieved.
-p293-310|p293|{B AH1 T SH IY1 Z AO1 L S OW0 B Y UW1 T AH0 F AH0 L B IH0 HH AY1 N D DH AH0 F EY1 S sp}|but she's also beautiful behind the face.
-p274-074|p274|{AY1 W AA1 N T DH AH0 K AA1 M AH0 N W EH2 L TH AH0 N D Y UH2 R AH0 P IY1 AH0 N T AY1 T AH0 L Z sp}|i want the commonwealth and european titles.
-p274-345|p274|{AW1 ER0 S IY1 Z AH0 N IH1 Z N AA1 T F IH1 N IH0 SH T sp}|our season is not finished.
-p298-238|p298|{N AH1 TH IH0 NG IH1 Z L AO1 S T sp EH1 V R IY0 TH IH2 NG IH1 Z R IY0 S AY1 K AH0 L D sp}|nothing is lost, everything is recycled.
-p238-382|p238|{HH IY1 D IH1 D N AA1 T S EY1 DH AE1 T sp}|he did not say that.
-p264-179|p264|{Y UW1 K AE1 N S P EH1 N D M AH1 N IY0 AA1 N HH AW1 Z IH0 NG sp}|you can spend money on housing.
-p330-276|p330|{AY1 IH0 K S P EH1 K T AH0 D DH IY1 Z K AY1 N D AH1 V K W EH1 S CH AH0 N Z sp}|i expected these kind of questions.
-p307-359|p307|{IH1 T W OW1 N T HH AE1 P AH0 N OW1 V ER0 N AY1 T sp B AH1 T TH IH1 NG Z W IH1 L G EH1 T B EH1 T ER0 sp}|it won't happen overnight, but things will get better.
-p238-273|p238|{IH0 N IH1 SH AH0 L M AA1 R K AH0 T R IY0 AE1 K SH AH0 N W AA1 Z K L OW1 S T UW1 Y UW0 F AO1 R IH0 K sp}|initial market reaction was close to euphoric.
-p274-106|p274|{S K AA1 T L AH0 N D W IH1 L B IY1 AE1 N IH1 N T AH0 G R AH0 L P AA1 R T AH1 V AE1 B IY0 N AE1 SH AH0 N AH0 L sp}|scotland will be an integral part of abbey national.
-p330-068|p330|{AY1 TH IH1 NG K IH1 T IH1 Z AH0 R IY0 L IY1 S AH1 V T EH1 N SH AH0 N sp}|i think it is a release of tension.
-p274-004|p274|{W IY1 AO1 L S OW0 N IY1 D AH0 S M AO1 L P L AE1 S T IH0 K S N EY1 K AH0 N D AH0 B IH1 G T OY1 F R AA1 G F AO1 R DH AH0 K IH1 D Z sp}|we also need a small plastic snake and a big toy frog for the kids. 
-p307-140|p307|{F L AO1 R AH0 D AH0 IH1 Z DH AH0 P IH1 V AH0 T AH0 L S T EY1 T IH0 N DH AH0 N EY1 SH AH0 N sp}|florida is the pivotal state in the nation.
-p330-203|p330|{AW1 ER0 M EH1 S AH0 JH W AA1 Z IH0 N K L UW1 S IH0 V sp}|our message was inclusive.
-p306-298|p306|{M AY1 V Y UW1 HH AE1 Z N AW1 K AH0 M P L IY1 T L IY0 CH EY1 N JH D sp}|my view has now completely changed.
-p307-405|p307|{W EH1 DH ER0 DH IH1 S R IH0 T ER1 N W AA1 Z T UW1 S UW1 N sp}|whether this return was too soon.
-p306-301|p306|{HH IY1 W AA1 Z DH EH1 N R IY2 P L EY1 S T B AY1 R AA1 S sp}|he was then replaced by ross.
-p330-022|p330|{DH AH0 AE1 K CH AH0 W AH0 L P R AY1 M EH2 R IY0 R EY1 N B OW2 AH0 B Z ER1 V D IH1 Z S EH1 D T UW1 B IY1 DH AH0 IH0 F EH1 K T AH1 V S UW1 P ER0 sp IH2 M P AH0 Z IH1 SH AH0 N AH1 V AH0 N AH1 M B ER0 AH1 V B AW1 Z sp}|the actual primary rainbow observed is said to be the effect of super-imposition of a number of bows.
-p301-244|p301|{S ER1 JH EH1 R AH0 M IY0 sp F R AH1 M G L AE1 S K OW2 sp S EH1 D DH EY1 HH AE1 D B IH1 N D IH0 L AY1 T AH0 D sp}|sir jeremy, from glasgow, said they had been delighted.
-p300-076|p300|{HH EH1 N M AH0 N IH1 Z T EY1 K IH0 NG N AH1 TH IH0 NG F AO1 R G R AE1 N T AH0 D sp}|henman is taking nothing for granted.
-p306-042|p306|{AH0 R AH0 K AO1 R D IH0 NG K AA1 N T R AE2 K T IH1 Z AA1 N DH AH0 HH ER0 AY1 Z AH0 N sp}|a recording contract is on the horizon.
-p307-393|p307|{M AH0 K M AE1 S T ER0 HH AE1 D AO0 L R EH1 D IY0 S IY1 N DH AH0 F ER1 S T P AA1 R T sp}|mcmaster had already seen the first part.
-p301-061|p301|{DH AE1 T IH1 Z W AY1 W IY1 W AA1 N T DH IH1 S D IH0 S IH1 ZH AH0 N R IH0 V ER1 S T sp}|that is why we want this decision reversed.
-p238-343|p238|{S K AA1 T IH0 SH K AH0 N S UW1 M ER0 P R AH0 T EH1 K SH AH0 N G R UW1 P S W ER0 JH EH1 N ER0 AH0 L IY0 R IH0 S EH1 P T IH0 V T UW1 DH AH0 P R AH0 P OW1 Z AH0 L Z sp}|scottish consumer protection groups were generally receptive to the proposals.
-p307-111|p307|{DH AH0 L EY1 B AW2 R P AA1 R T IY0 Z N AA1 T D AW0 N B IY1 T sp AH0 N D N IY1 DH ER0 IH1 Z DH AH0 L EY1 B AW2 R G AH1 V ER0 M AH0 N T sp}|the labour party's not downbeat, and neither is the labour government.
-p298-261|p298|{TH IH1 NG Z W ER0 N AA1 T IY1 Z IY0 F R AH1 M DH AH0 AW1 T S EH2 T sp}|things were not easy from the outset.
-p293-282|p293|{W IY1 V EH1 R IY0 M AH1 CH R AH0 G R EH1 T DH AE1 T IH1 T HH AE1 Z AH0 K ER1 D sp}|we very much regret that it has occurred.
-p274-244|p274|{TH R IY1 W IY1 K S L EY1 T ER0 sp HH IY1 R IH0 Z AY1 N D sp}|three weeks later, he resigned.
-p238-136|p238|{W EH1 S T ER0 N K AH1 N T R IY0 Z K AH0 N D EH1 M D DH AH0 K AA1 N D AH0 K T AH1 V DH AH0 P OW1 L sp}|western countries condemned the conduct of the poll.
-p298-021|p298|{DH AH0 D IH1 F ER0 AH0 N S IH0 N DH AH0 R EY1 N B OW2 D IH0 P EH1 N D Z K AH0 N S IH1 D ER0 AH0 B L IY0 AH0 P AA1 N DH AH0 S AY1 Z AH1 V DH AH0 D R AA1 P S sp AH0 N D DH AH0 W IH1 D TH AH1 V DH AH0 K AH1 L ER0 D B AE1 N D IH1 N K R IY2 S IH0 Z AE1 Z DH AH0 S AY1 Z AH1 V DH AH0 D R AA1 P S IH1 N K R IY2 S IH0 Z sp}|the difference in the rainbow depends considerably upon the size of the drops, and the width of the colored band increases as the size of the drops increases.
-p264-414|p264|{AY1 W AA1 Z DH AH0 SH IY1 P sp}|i was the sheep.
-p330-153|p330|{D IH0 S R AH1 P SH AH0 N W IH1 L B IY1 K EH1 P T T UW1 AH0 M IH1 N AH0 M AH0 M sp}|disruption will be kept to a minimum.
-p330-096|p330|{W AH1 T D UW1 W IY1 D UW1 F AO1 R AE1 N AA1 N K AO2 R sp}|what do we do for an encore?
-p298-230|p298|{DH IH1 S K UH1 D B IY1 W AH1 N S AH1 CH K EY1 S sp HH IY1 D IH0 K L EH1 R D sp}|this could be one such case, he declared.
-p238-333|p238|{F L AE1 NG K ER0 G AO1 R D AH0 N S IH1 M P S AH0 N M EY1 AO1 L S OW0 F IY1 CH ER0 IH0 N DH AE1 T M AE1 CH sp}|flanker gordon simpson may also feature in that match.
-p274-135|p274|{AY1 L AH1 V DH AH0 S P EH1 K T AH0 K AH0 L AH1 V S IH1 N AH0 M AH0 sp}|i love the spectacle of cinema.
-p300-058|p300|{M IH1 S T ER0 K UH1 K sp AH0 L EH1 F T sp W IH1 NG ER0 F R AH1 M B R IH1 T AH0 N sp W UH1 D B IY1 AY0 D IY1 L IY0 P L EY1 S T sp}|mr cook, a left-winger from britain, would be ideally placed.
-p301-291|p301|{DH AH0 P EY1 N T IH0 NG W AA1 Z S T AA1 R T AH0 D sp B AH1 T F IH1 N IH0 SH IH0 NG IH1 T W AA1 Z K W AY1 T AH0 N AH1 DH ER0 M AE1 T ER0 sp}|the painting was started, but finishing it was quite another matter.
-p300-279|p300|{B AH1 T sp IH0 N DH AH0 EH1 N D sp HH IY1 D IH1 D sp AH0 N D B L UW1 HH IH1 M AH0 W EY1 sp}|but, in the end, he did - and blew him away.
-p307-357|p307|{DH EY1 W ER0 DH AH0 B EH1 S T T IY1 M sp B AH1 T AH0 N L AH1 K IY0 IH0 N DH AH0 EH1 N D sp}|they were the best team, but unlucky in the end.
-p300-100|p300|{M AY1 AO1 F AH0 S IH1 Z B EH1 R sp}|my office is bare.
-p264-306|p264|{HH IY1 R IH0 M EY1 N Z AH0 M EY1 N B AO1 R D D ER0 EH1 K T ER0 AH1 V R OY1 AH0 L sp}|he remains a main board director of royal.
-p238-177|p238|{DH AH0 CH EY1 N JH AH0 Z T UH1 K IH0 F EH1 K T F R AH1 M JH UW1 N sp}|the changes took effect from june.
-p298-176|p298|{AH0 W AY1 D R EY1 N JH AH1 V R IY0 S T R IH1 K SH AH0 N Z AA1 R IH0 N P L EY1 S sp}|a wide range of restrictions are in place.
-p274-021|p274|{DH AH0 D IH1 F ER0 AH0 N S IH0 N DH AH0 R EY1 N B OW2 D IH0 P EH1 N D Z K AH0 N S IH1 D ER0 AH0 B L IY0 AH0 P AA1 N DH AH0 S AY1 Z AH1 V DH AH0 D R AA1 P S sp AH0 N D DH AH0 W IH1 D TH AH1 V DH AH0 K AH1 L ER0 D B AE1 N D IH1 N K R IY2 S IH0 Z AE1 Z DH AH0 S AY1 Z AH1 V DH AH0 D R AA1 P S IH1 N K R IY2 S IH0 Z sp}|the difference in the rainbow depends considerably upon the size of the drops, and the width of the colored band increases as the size of the drops increases. 
-p301-011|p301|{W EH1 N AH0 M AE1 N L UH1 K S F AO1 R S AH1 M TH IH0 NG B IH0 AA1 N D HH IH1 Z R IY1 CH sp HH IH1 Z F R EH1 N D Z S EY1 HH IY1 IH1 Z L UH1 K IH0 NG F AO1 R DH AH0 P AA1 T AH1 V G OW1 L D AE1 T DH AH0 EH1 N D AH1 V DH AH0 R EY1 N B OW2 sp}|when a man looks for something beyond his reach, his friends say he is looking for the pot of gold at the end of the rainbow.
-p274-269|p274|{N OW1 P R AH0 D AH1 K SH AH0 N K AA1 N T R AE2 K T IH1 Z Y EH1 T IH0 N S AY1 T sp}|no production contract is yet in sight.
-p306-006|p306|{W EH1 N DH AH0 S AH1 N L AY2 T S T R AY1 K S R EY1 N D R AA2 P S IH0 N DH AH0 EH1 R sp DH EY1 AE1 K T AE1 Z AH0 P R IH1 Z AH0 M AH0 N D F AO1 R M AH0 R EY1 N B OW2 sp}|when the sunlight strikes raindrops in the air, they act as a prism and form a rainbow.
-p238-183|p238|{AH0 G EH1 N HH IY1 D IH0 S M IH1 S T AH0 M ER1 JH ER0 W IH1 DH HH AE1 L IH0 F AE2 K S sp}|again he dismissed a merger with halifax.
-p307-149|p307|{W AH1 T DH AH0 D IH0 P AA1 R T M AH0 N T AH1 V T R AE1 N S P AO0 R T W IH1 L M EY1 K K L IH1 R sp}|what the department of transport will make clear.
-p264-321|p264|{W IY1 W AA1 N T IH0 M IY1 D IY0 AH0 T AE1 K SH AH0 N sp}|we want immediate action.
-p293-246|p293|{HH IY1 D AH1 Z AH0 N T N IY1 D T UW1 B IY1 T OW1 L D sp HH IY1 N OW1 Z DH AH0 T R UW1 TH sp}|he doesn't need to be told, he knows the truth.
-p301-221|p301|{HH IY1 AE1 D AH0 D L EY1 T ER0 sp N AO1 R M AH0 L IY0 sp IH1 T S N AA1 T AH0 D EY1 N JH ER0 AH0 S R IH1 V ER0 sp}|he added later, normally, it's not a dangerous river.
-p293-280|p293|{Y EH1 S T ER0 D EY2 HH ER0 F AE1 M AH0 L IY0 W ER0 T UW1 AH1 P S EH2 T T UW1 S P IY1 K sp}|yesterday her family were too upset to speak.
-p298-312|p298|{W IY1 HH AE1 V DH AH0 L OW0 K EY1 SH AH0 N sp W IH1 CH IH1 Z AH0 SH UH1 R D sp}|we have the location, which is assured.
-p306-319|p306|{AY1 T EH1 N D T UW1 N AA1 T L UH1 K B AE1 K sp}|i tend to not look back.
-p307-358|p307|{W IY1 M AH1 S T N AA1 T G OW1 D AW1 N DH AE1 T R OW1 D sp}|we must not go down that road.
-p300-293|p300|{AE1 Z AH0 G R IY1 D sp DH AH0 P R AY1 M M IH1 N AH0 S T ER0 W AA1 Z D R IH1 V AH0 N T UW1 W EH2 S T M IH1 N S T ER0 HH AO1 L sp}|as agreed, the prime minister was driven to westminster hall.
-p307-210|p307|{DH EY1 AO1 L W EY2 Z W AA1 N T T UW1 G IH1 V AH0 P ER0 F AO1 R M AH0 N S sp}|they always want to give a performance.
+p306-312|p306|{DH AH0 AE1 L AY0 Z IH0 N T EH1 N D T UW1 M EY0 N T EY1 N DH AH0 AE1 V ER0 IH0 JH sp}|the allies intend to maintain the average.
+p298-041|p298|{F AO1 R W AH1 N TH IH1 NG sp HH IY1 W AA1 Z G R OW1 IH0 NG F AA1 R T UW1 K W IH1 K L IY0 sp}|for one thing, he was growing far too quickly.
+p293-292|p293|{W IY1 T OW1 L D DH EH1 M IH0 N JH UW1 N sp}|we told them in june.
+p301-107|p301|{DH AH0 L IH1 T AH0 L B OY1 W AA1 Z P L EY1 IH0 NG F UH1 T B AO2 L AE1 T L AH1 N CH T AY2 M sp}|the little boy was playing football at lunchtime.
+p274-052|p274|{DH AH0 L AE1 T ER0 W ER0 N AA1 T F R AH1 M S K AA1 T L AH0 N D sp}|the latter were not from scotland.
+p298-014|p298|{T UW1 DH AH0 HH EH1 B R AH0 S IH1 T W AA1 Z AH0 T OW1 K AH0 N DH AE1 T DH EH1 R W UH1 D B IY1 N OW1 M AO1 R Y UW2 N AH0 V ER1 S AH0 L F L AH1 D Z sp}|to the hebrews it was a token that there would be no more universal floods.
+p238-364|p238|{W IH1 L Y AH0 M HH EY1 G D IH0 L AY1 T AH0 D HH IH1 Z P AA1 R T IY0 sp}|william hague delighted his party.
 p306-292|p306|{EH1 V R IY0 W AH2 N N UW1 W EH1 R DH EY1 W ER0 sp}|everyone knew where they were.
-p301-150|p301|{B AH1 T IH1 T L UH1 K S G UH1 D F AO1 R N EH1 K S T Y IH1 R sp}|but it looks good for next year.
-p264-464|p264|{S K AA1 T L AH0 N D N IY1 D Z DH IH1 S AH0 W AO1 R D sp}|scotland needs this award.
-p330-118|p330|{AH0 B AH1 V AO1 L sp HH IY1 W AA1 Z N AA1 K T AW1 T B AY1 DH AH0 K W AY1 ER0 sp}|above all, he was knocked out by the choir.
-p300-026|p300|{DH IH1 S IH1 Z N AA1 T AH0 F L OW1 T IH0 NG L AA1 S V EY1 G AH0 S sp}|this is not a floating las vegas.
-p238-031|p238|{N AH2 N DH AH0 L EH1 S sp DH AH0 OW1 V ER0 AO2 L P IH1 K CH ER0 IH1 Z HH EH1 L TH IY0 sp}|nonetheless, the overall picture is healthy.
-p301-212|p301|{IY0 EY1 N D AH1 NG K AH0 N S M IH1 TH IH1 Z R AO1 NG sp}|iain duncan smith is wrong.
-p274-445|p274|{S IY1 N Y ER0 M AE1 N AH0 JH M AH0 N T IH0 N S K AA1 T L AH0 N D TH R UW1 IH1 T S W EY1 T B IH0 HH AY1 N D DH AH0 AO1 R K AH0 S T R AH0 sp}|senior management in scotland threw its weight behind the orchestra.
-p306-272|p306|{W IY1 HH AE1 V T UW1 S AO1 R T IH1 T AW1 T AW0 ER0 S EH1 L V Z sp}|we have to sort it out ourselves.
-p300-291|p300|{IH1 T S N AA1 T IY1 V IH0 N F IH1 N IH0 SH T sp}|it's not even finished.
-p238-413|p238|{W IY1 L AO1 S T AW1 ER0 K AH0 M P OW1 ZH ER0 T AH0 W AO1 R D Z DH AH0 IH1 N T ER0 V AH0 L sp HH IY1 S EH1 D sp}|we lost our composure towards the interval, he said.
-p274-140|p274|{DH AH0 B IY2 B IY0 S IY1 W AA1 Z AH0 D IH0 S G R EY1 S sp}|the bbc was a disgrace.
-p293-188|p293|{B AH1 T AE1 L AH0 N IH1 Z D EH1 D L IY0 S IH1 R IY0 AH0 S sp}|but allen is deadly serious.
+p298-038|p298|{IH1 T W AA1 Z AH0 K R UW1 SH AH0 L M OW1 M AH0 N T sp}|it was a crucial moment.
+p330-023|p330|{IH1 F DH AH0 R EH1 D AH1 V DH AH0 S EH1 K AH0 N D B AW1 F AO1 L Z AH0 P AA1 N DH AH0 G R IY1 N AH1 V DH AH0 F ER1 S T sp DH AH0 R IH0 Z AH1 L T IH1 Z T UW1 G IH1 V AH0 B AW1 W IH1 DH AE1 N AE0 B N AO1 R M AH0 L IY0 W AY1 D Y EH1 L OW0 B AE1 N D sp S IH1 N S R EH1 D AH0 N D G R IY1 N L AY1 T W EH1 N M IH1 K S T F AO1 R M Y EH1 L OW0 sp}|if the red of the second bow falls upon the green of the first, the result is to give a bow with an abnormally wide yellow band, since red and green light when mixed form yellow.
+p301-318|p301|{HH AW2 EH1 V ER0 sp S IH1 V AH0 L R AY1 T S K AE0 M P EY1 N ER0 Z W EH1 L K AH0 M D DH AH0 R UW1 L IH0 NG sp}|however, civil rights campaigners welcomed the ruling.
+p330-020|p330|{M EH1 N IY0 K AA1 M P L AH0 K EY2 T AH0 D AY0 D IY1 AH0 Z AH0 B AW1 T DH AH0 R EY1 N B OW2 HH AE1 V B IH1 N F AO1 R M D sp}|many complicated ideas about the rainbow have been formed.
+p238-097|p238|{AY1 W AA1 Z V EH1 R IY0 P L IY1 Z D W IH1 DH DH EH1 M T AH0 D EY1 sp DH OW1 sp}|i was very pleased with them today, though.
+p300-007|p300|{DH AH0 R EY1 N B OW2 IH1 Z AH0 D IH0 V IH1 ZH AH0 N AH1 V W AY1 T L AY1 T IH0 N T UW1 M EH1 N IY0 B Y UW1 T AH0 F AH0 L K AH1 L ER0 Z sp}|the rainbow is a division of white light into many beautiful colors.
+p330-053|p330|{AY1 W AA1 Z N EH1 V ER0 G OW1 IH0 NG T UW1 P L EY1 AH0 G EH1 N S T S K AA1 T L AH0 N D sp}|i was never going to play against scotland.
+p306-250|p306|{B R AW1 N IH1 Z AE1 N IH1 N T R AH0 S T IH0 NG M AE1 N sp B AH1 T HH IY1 IH1 Z N AA1 T D EH1 S P R IH0 T sp}|brown is an interesting man, but he is not desperate.
+p274-434|p274|{DH IH1 S IH1 Z AH0 L IH1 M AH0 T AH0 D M AA1 R K AH0 T sp}|this is a limited market.
+p306-119|p306|{K AH0 M P L IY1 SH AH0 N IH1 Z IH0 K S P EH1 K T AH0 D B AY1 AA0 K T OW1 B ER0 DH AH0 F AA1 L OW0 IH0 NG Y IH1 R sp}|completion is expected by october the following year.
+p264-163|p264|{DH EH1 R IH1 Z N OW1 D AW1 T DH EH1 R Z R UW1 M F AO1 R AH1 S sp}|there is no doubt there's room for us.
+p330-209|p330|{AY1 W IH1 L N AA1 T T EY1 K Y UW1 AW1 T AH1 V K AA1 N T EH0 K S T sp}|i will not take you out of context.
+p330-328|p330|{B IH1 L D IH0 NG AE1 N AH1 N D ER0 G R AW2 N D sp F AO1 R IH0 G Z AE1 M P AH0 L sp HH AE1 Z P R UW1 V D AH0 N AY1 T M EH2 R sp}|building an underground, for example, has proved a nightmare.
+p307-397|p307|{P AA0 R T IH1 SH AH0 N IH1 Z N AA1 T AE1 N AA1 P SH AH0 N sp}|partition is not an option.
+p264-093|p264|{AA1 R Y UW1 G OW1 IH0 NG T UW1 W IH1 N sp}|are you going to win?
+p264-483|p264|{Y AO1 R B AE1 NG K M EY1 AO1 F ER0 Y UW1 AH0 CH OY1 S AH1 V AA1 P SH AH0 N Z sp}|your bank may offer you a choice of options.
+p301-296|p301|{HH IY1 AO1 R SH IY1 W IH1 L OW1 V ER0 S IY2 DH AH0 L IY1 D ER0 SH IH2 P K AA1 N T EH0 S T sp}|he or she will oversee the leadership contest.
+p293-140|p293|{AY1 V B IH1 N V EH1 R IY0 N ER1 V AH0 S sp}|i've been very nervous.
+p264-204|p264|{P IY1 P AH0 L EH1 L S W EH2 R IH0 N S K AA1 T L AH0 N D W IH1 L F IY1 L K AH1 T AO1 F B AY1 DH IH1 S sp}|people elsewhere in scotland will feel cut off by this.
+p274-146|p274|{DH AH0 HH OW1 L IH1 N D AH0 S T R IY0 IH1 Z AH0 SH AE1 M B AH0 L Z sp}|the whole industry is a shambles.
+p274-093|p274|{IH1 T W AA1 Z AH0 F AE1 M AH0 L IY0 T R AE1 JH AH0 D IY0 sp}|it was a family tragedy.
+p293-313|p293|{S AH1 CH AH0 JH AH1 S T M AH0 N T S HH AE1 V B IH1 N DH AH0 S AE0 L V EY1 SH AH0 N AH1 V Y UW0 N AY1 T AH0 D sp}|such adjustments have been the salvation of united.
+p238-182|p238|{DH AH0 HH EH1 D T IY1 CH ER0 W AA1 Z AH0 HH AY1 L IY0 IH0 F EH1 K T IH0 V L IY1 D ER0 AH0 N D M AE1 N AH0 JH ER0 sp}|the head teacher was a highly effective leader and manager.
+p307-384|p307|{IH1 T L UH1 K S L AY1 K P EH1 R AH0 D AY2 S sp}|it looks like paradise.
+p264-479|p264|{W IY1 W ER0 G IH1 V AH0 N AH0 B R EY1 K sp}|we were given a break.
+p274-375|p274|{F R AH1 M AW1 ER0 P OY1 N T AH1 V V Y UW1 sp DH AH0 P L EY1 ER0 IH1 Z F R IY1 T UW1 L IY1 V sp}|from our point of view, the player is free to leave.
+p274-380|p274|{HH IY1 R sp T UW1 sp DH AH0 P OW1 S T AO1 F AH0 S HH AE1 Z M IH1 S T DH AH0 B OW1 T sp}|here, too, the post office has missed the boat.
+p274-104|p274|{W AY1 L DH EY1 W EH1 N T AA1 N HH AA1 L AH0 D EY2 sp W IY1 G AA1 T DH AH0 K AA1 N T R AE2 K T sp}|while they went on holiday, we got the contract.
+p274-150|p274|{DH AH0 P OY1 N T IH1 Z R EY1 Z D AH0 G EH1 N DH AE1 T IY1 V N IH0 NG AE1 T DH AH0 AH0 S EH1 M B L IY0 R UW1 M Z sp}|the point is raised again that evening at the assembly rooms.
+p238-152|p238|{D R IH1 NG K AH0 N D P EH1 T R OW0 L P R AY1 S AH0 Z R IH0 M EY1 N AH0 N T AH1 CH T sp}|drink and petrol prices remain untouched.
+p300-108|p300|{Y UW1 IY1 DH ER0 HH AE1 V HH IH1 M AO1 R Y UW1 D OW1 N T sp}|you either have him or you don't.
+p306-204|p306|{D AA1 N AH0 L D W AA1 Z AH0 M AE1 N W IH1 DH M EH1 N IY0 F R EH1 N D Z sp}|donald was a man with many friends.
+p300-043|p300|{IH1 T HH AE1 Z B IH1 N AH0 HH AO1 R AH0 B AH0 L sp HH AO1 R AH0 B AH0 L T AY1 M sp}|it has been a horrible, horrible time.
+p298-196|p298|{AY1 D OW1 N T N OW1 IH0 G Z AE1 K T L IY0 W AH1 T HH AE1 P AH0 N D sp}|i don't know exactly what happened.
+p238-388|p238|{HH IH1 Z S AH0 K S EH1 S ER0 W AA1 Z OW1 N L IY0 AH0 P OY1 N T AH0 D L AE1 S T M AH1 N TH sp}|his successor was only appointed last month.
+p307-413|p307|{IH0 N AH0 D IH1 SH AH0 N sp S ER1 T AH0 N EH1 R IY0 AH0 Z AA1 R K L OW1 Z D AE1 T S ER1 T AH0 N T AY1 M Z sp}|in addition, certain areas are closed at certain times.
+p298-258|p298|{DH EY1 HH AE1 V AH0 V EH1 R IY0 G UH1 D M EH1 TH AH0 D AH1 V W ER1 K IH0 NG sp}|they have a very good method of working.
+p300-344|p300|{HH IY1 W AA1 Z V IH1 Z AH0 T AH0 D B AY1 AH1 K K AA1 N S AH0 L ER0 AH0 F IH1 SH AH0 L Z sp}|he was visited by uk consular officials.
+p274-288|p274|{DH EY1 K AE1 N L IY1 V AE1 T EH1 N IY0 T AY1 M sp}|they can leave at any time.
+p264-257|p264|{W IY1 HH AE1 D AH0 R AY1 T T UW1 IH0 K S P EH1 K T DH OW1 Z D EY1 Z W ER0 OW1 V ER0 sp}|we had a right to expect those days were over.
+p293-397|p293|{W AH1 T K AY1 N D AH1 V P ER1 S AH0 N IH1 Z HH IY1 sp}|what kind of person is he?
+p298-337|p298|{S EH1 N T AH0 N S W AA1 Z D IH0 F ER1 D F AO1 R B AE1 K G R AW2 N D R IH0 P AO1 R T S sp}|sentence was deferred for background reports.
+p274-097|p274|{DH AH0 F AA1 L OW0 IH0 NG AA1 R DH AH0 P R IH1 N S AH0 P AH0 L P R AH0 V IH1 ZH AH0 N Z sp}|the following are the principal provisions.
+p301-172|p301|{DH AH0 AE1 N S ER0 IH1 Z M EY1 HH EH2 M sp}|the answer is mayhem.
+p300-245|p300|{DH EH1 R F AY1 N D IH0 NG Z AA1 R P AH1 B L IH0 SH T IH0 N DH AH0 JH ER1 N AH0 L sp IH1 N JH ER0 IY0 P R IY0 V EH1 N SH AH0 N sp}|their findings are published in the journal, injury prevention.
+p301-376|p301|{DH AH0 HH OW1 M W AA1 Z N AW1 AH1 N D ER0 N UW1 M AE1 N AH0 JH M AH0 N T sp}|the home was now under new management.
+p293-033|p293|{S EH1 V R AH0 L AH1 DH ER0 Z W ER0 AE1 B S AH0 N T sp}|several others were absent.
+p264-108|p264|{AY1 F ER1 S T M EH1 T HH IH1 M L AE1 S T S AH1 M ER0 sp}|i first met him last summer.
+p307-346|p307|{AE1 T DH IH1 S L EH1 V AH0 L sp Y UW1 HH AE1 V AO1 L T UW1 P ER0 F AO1 R M W EH1 L sp}|at this level, you have all to perform well.
+p298-009|p298|{DH EH1 R IH1 Z sp AH0 K AO1 R D IH0 NG T UW1 L EH1 JH AH0 N D sp AH0 B OY1 L IH0 NG P AA1 T AH1 V G OW1 L D AE1 T W AH1 N EH1 N D sp}|there is , according to legend, a boiling pot of gold at one end.
+p264-255|p264|{HH IY1 F EH1 L T T UW1 K L OW1 S T UW1 HH EH1 D AO1 F AH0 S sp}|he felt too close to head office.
+p300-260|p300|{HH IY1 M AH1 S T HH AE1 V S AH1 M TH IH0 NG AH1 P HH IH1 Z S L IY1 V sp}|he must have something up his sleeve.
+p238-456|p238|{N AW1 IH1 T HH AE1 Z D AH1 B AH0 L D IH0 N S AY1 Z sp}|now it has doubled in size.
+p306-147|p306|{W IY1 N IY1 D AH0 N UW1 K AY1 N D AH1 V TH IY1 AH0 T ER0 sp}|we need a new kind of theatre.
+p330-179|p330|{AY1 V D AH1 N IH1 T AO1 L M OW2 S T L AY1 K AH0 V ER0 AY1 AH0 T IY0 SH OW1 sp}|i've done it almost like a variety show.
+p306-052|p306|{IH1 T S AH0 G R EY1 EH1 R IY0 AH0 sp}|it's a grey area.
+p264-101|p264|{T UW1 AH1 V AW1 ER0 K R UW1 W ER0 K IH1 L D sp}|two of our crew were killed.
+p306-133|p306|{W IY1 HH AE1 V AH0 N T AE1 K CH AH0 W AH0 L IY0 K AH0 N S IH1 D ER0 D IH1 T D AW1 N HH IY1 R sp}|we haven't actually considered it down here.
+p298-076|p298|{IH1 T W IH1 L B IY1 V EH1 R IY0 Y UW1 S F AH0 L F AO1 R AH1 S sp}|it will be very useful for us.
+p264-448|p264|{P AW1 ER0 Z L UH1 K S S T R EY1 T AH0 HH EH1 D sp}|powers looks straight ahead.
+p274-357|p274|{DH IH1 S M AY1 T S IY1 M L AY1 K AE1 N AW0 T R EY1 JH AH0 S AH0 S ER1 SH AH0 N sp}|this might seem like an outrageous assertion.
+p264-273|p264|{IH1 F AY1 D IH1 D AH0 N T G OW1 F AO1 R DH AH0 W ER1 L D R EH1 K ER0 D sp AY1 D F IY1 L G IH1 L T IY0 sp}|if i didn't go for the world record, i'd feel guilty.
+p238-045|p238|{DH IH1 S R EH2 P R AH0 Z EH1 N T S AH0 T AH1 F G EY1 M F AO1 R AH1 S sp}|this represents a tough game for us.
+p293-321|p293|{DH AH0 M IH1 N AH0 S T ER0 Z AA1 R N AW1 T UW1 M EY1 K DH EH1 R D IH0 S IH1 ZH AH0 N sp}|the ministers are now to make their decision.
+p307-041|p307|{IH1 T D AH1 Z AH0 N T M EY1 K DH EH1 M IY1 V AH0 L sp}|it doesn't make them evil.
+p307-158|p307|{DH AE1 T S W AY1 DH AH0 Y AH1 NG M Y UW0 Z IH1 SH AH0 N Z HH AE1 V JH OY1 N D sp}|that's why the young musicians have joined.
+p264-324|p264|{DH EY1 R IH1 L IY0 HH AE1 D AH0 G OW1 AE1 T AH1 S sp}|they really had a go at us.
+p293-151|p293|{AW1 ER0 P AA1 L AH0 S IY0 IH1 Z K L IH1 R sp}|our policy is clear.
+p301-191|p301|{W IY1 AA1 R S IY1 K IH0 NG F AH1 N D Z F R AH1 M G AH1 V ER0 M AH0 N T D IH0 P AA1 R T M AH0 N T S sp}|we are seeking funds from government departments.
+p307-249|p307|{AY1 S AO1 M IH1 L AH0 T EH2 R IY0 V IY1 HH IH0 K AH0 L Z IH0 N DH AH0 D IH1 S T AH0 N S sp}|i saw military vehicles in the distance.
+p300-213|p300|{IH1 T IH1 Z L AY1 K B IY1 IH0 NG AH0 K W AA1 L AH0 F AY2 ER0 AH0 G EH1 N sp}|it is like being a qualifier again.
+p274-223|p274|{L AO1 R AH0 IH1 Z AE1 N IH0 N V EH1 S T M AH0 N T B AE1 NG K ER0 sp}|laura is an investment banker.
+p307-370|p307|{M IH1 S T ER0 S T R AO1 W AA1 Z HH OW1 M S EH1 K R AH0 T EH2 R IY0 AE1 T DH AH0 T AY1 M sp}|mr straw was home secretary at the time.
+p301-403|p301|{DH EH1 R W AA1 Z N OW1 K OW0 HH IY1 ZH AH0 N sp}|there was no cohesion.
+p330-063|p330|{N AO1 R D AH1 Z IH1 T HH AE1 V AH0 S T AA1 K AH1 V M EH1 D AH0 S AH0 N Z sp}|nor does it have a stock of medicines.
+p306-305|p306|{P IY1 P AH0 L K AE1 N G EH1 T DH EH1 M IH1 F DH EY1 W AA1 N T sp}|people can get them if they want.
+p264-075|p264|{DH AE1 T IH1 Z R IH1 L IY0 AO1 L sp}|that is really all.
+p298-047|p298|{IH1 T W AA1 Z AE1 N IY1 Z IY0 D IH0 S IH1 ZH AH0 N T UW1 K AH1 M HH IY1 R sp}|it was an easy decision to come here.
+p301-222|p301|{DH IH1 S M EY1 K S N OW1 S EH1 N S sp}|this makes no sense!
+p306-266|p306|{HH IH1 Z IH0 K S P AH1 L SH AH0 N W UH1 D N AA1 T S AA1 L V DH AH0 P R AA1 B L AH0 M sp}|his expulsion would not solve the problem.
+p293-180|p293|{S AE1 D L IY0 sp IH1 T T UH1 K AH0 T R AE1 JH AH0 D IY0 T UW1 CH EY1 N JH TH IH1 NG Z sp}|sadly, it took a tragedy to change things.
+p274-127|p274|{W AH1 T D UW1 W IY1 W AA1 N T T UW1 D UW1 DH AE1 T F AO1 R sp}|what do we want to do that for?
+p293-078|p293|{AY1 K AE1 N L AY1 V W IH1 DH JH AH1 S T DH AH0 W AH1 N sp}|i can live with just the one.
+p298-145|p298|{B AH1 T sp K L IH1 R L IY0 sp IH1 T IH1 Z K R UW1 SH AH0 L T UW1 AH2 N D ER0 S T AE1 N D DH AE1 T P OY1 N T sp}|but, clearly, it is crucial to understand that point.
+p293-390|p293|{AO1 L W ER0 W IH0 DH IH1 N R EY1 N JH AH1 V IH0 Z R EY1 L IY0 S IH1 T IY0 Z sp}|all were within range of israeli cities.
+p293-111|p293|{L UH1 K AE1 T HH IH1 Z L AE1 S T K AH1 P AH0 L AH1 V R EH1 K ER0 D Z sp}|look at his last couple of records.
+p264-068|p264|{DH AE1 T IH1 Z N AA1 T P AA1 S AH0 B AH0 L sp}|that is not possible.
+p330-215|p330|{IH1 T HH AE1 D T UW1 B IY1 M AO1 R F L EH1 K S AH0 B AH0 L sp}|it had to be more flexible.
+p330-309|p330|{W IY1 AO1 L W ER1 K F AO1 R N AH1 TH IH0 NG sp}|we all work for nothing.
+p300-018|p300|{EH1 R AH0 S T AA2 T AH0 L TH AO1 T DH AE1 T DH AH0 R EY1 N B OW2 W AA1 Z K AA1 Z D B AY1 R AH0 F L EH1 K SH AH0 N AH1 V DH AH0 S AH1 N Z R EY1 Z B AY1 DH AH0 R EY1 N sp}|aristotle thought that the rainbow was caused by reflection of the sun's rays by the rain.
+p330-290|p330|{IH1 F K AH0 N V IH1 K T AH0 D sp DH EY1 F EY1 S DH AH0 D EH1 TH P EH1 N AH0 L T IY0 sp}|if convicted, they face the death penalty.
+p264-399|p264|{B AH1 T IH1 T IH1 Z HH ER0 P IH1 K CH ER0 sp}|but it is her picture.
+p274-422|p274|{DH IH1 S M AA1 R K AH0 T HH AE1 Z B IH1 N N AH0 G L EH1 K T AH0 D B AY1 DH AH0 W IH1 S K IY0 IH1 N D AH0 S T R IY0 sp}|this market has been neglected by the whisky industry.
+p264-446|p264|{DH AH0 TH R IY1 P R IY1 V IY0 AH0 S W IH1 N ER0 Z AO1 L S OW0 K EY1 M F R AH1 M S K AA1 T L AH0 N D sp}|the three previous winners also came from scotland.
+p307-329|p307|{AY1 P L EY1 D W EH1 L AA1 N S AE1 T ER0 D IY0 AH0 N D AH0 G EH1 N T AH0 D EY1 sp}|i played well on saturday and again today.
+p301-181|p301|{DH IH1 S D AH1 Z N AA1 T K R IY0 EY1 T EH1 N IY0 P R EH1 S IH0 D AH0 N T sp}|this does not create any precedent.
+p298-220|p298|{Y UW1 N OW1 sp HH IY1 W AA1 Z S T R AH1 G AH0 L IH0 NG W IH1 DH HH IH1 Z G EY1 M AO1 L W IY1 K sp}|you know, he was struggling with his game all week.
+p306-347|p306|{DH AH0 IH0 Z R EY1 L IY0 G AH1 V ER0 M AH0 N T IH1 Z D IH0 S T R OY1 IH0 NG DH AH0 P IY1 S P R AA1 S EH2 S sp}|the israeli government is destroying the peace process.
+p330-030|p330|{IH1 T W AA1 Z N AH1 TH IH0 NG T UW1 D UW1 W IH1 DH M AY1 D AO1 T ER0 sp}|it was nothing to do with my daughter.
+p307-079|p307|{W IH0 TH AW1 T AH0 P R UW1 V AH0 L sp DH AH0 S P AO1 R T W IH1 L F AY1 N D IH1 T D IH1 F AH0 K AH0 L T T UW1 D IH0 V EH1 L AH0 P sp}|without approval, the sport will find it difficult to develop.
+p330-384|p330|{S OW1 P IY1 P AH0 L W IH1 L K AH1 M AW1 T W IH1 DH DH IY1 Z TH IH1 NG Z sp}|so people will come out with these things.
+p293-011|p293|{W EH1 N AH0 M AE1 N L UH1 K S F AO1 R S AH1 M TH IH0 NG B IH0 AA1 N D HH IH1 Z R IY1 CH sp HH IH1 Z F R EH1 N D Z S EY1 HH IY1 Z L UH1 K IH0 NG F AO1 R DH AH0 P AA1 T AH1 V G OW1 L D AE1 T DH AH0 EH1 N D AH1 V DH AH0 R EY1 N B OW2 sp}|when a man looks for something beyond his reach, his friends say he's looking for the pot of gold at the end of the rainbow.
+p293-230|p293|{W IY1 HH AE1 D N OW1 AY0 D IY1 AH0 DH AE1 T DH IH1 S L EH1 T ER0 IH0 G Z IH1 S T AH0 D sp}|we had no idea that this letter existed.
+p330-259|p330|{S AH1 B Z N AA1 T Y UW1 Z D sp F ER0 N AE1 N D EH0 Z sp}|subs not used, fernandez.
+p307-145|p307|{IH1 T IH1 Z P AE1 T AH0 N T L IY0 T R UW1 sp}|it is patently true.
+p301-199|p301|{F R AE1 NG K L IY0 sp IH1 T W AA1 Z W ER1 TH DH AH0 B UH1 K IH0 NG sp}|frankly, it was worth the booking.
+p300-274|p300|{IH1 T D AH1 Z N AA1 T M UW1 V sp W IH1 CH IH1 Z AH0 M EY1 Z IH0 NG sp}|it does not move, which is amazing.
+p298-083|p298|{HH IH1 Z P EH1 R AH0 N T HH UH2 D IH1 Z K AO1 L D IH0 N T UW1 K W EH1 S CH AH0 N sp}|his parenthood is called into question.
+p264-143|p264|{AY1 T OW1 L D DH EH1 M D UH1 R IH0 NG DH EH1 R M AO1 R N IH0 NG B R EY1 K sp}|i told them during their morning break.
+p300-225|p300|{AH0 N D DH AE1 T G IH1 V Z AH0 K AY1 N D AH1 V F R IY1 D AH0 M sp}|and that gives a kind of freedom.
+p274-319|p274|{M AH0 K N AO1 T AH0 N W AA1 Z N AA1 T S OW1 SH UH1 R sp}|mcnaughton was not so sure.
+p238-124|p238|{S OW1 W AH1 T HH AE1 P AH0 N Z N EH1 K S T sp}|so what happens next?
+p301-008|p301|{DH IY1 Z T EY1 K DH AH0 SH EY1 P AH1 V AH0 L AO1 NG R AW1 N D AA1 R CH sp W IH1 DH IH1 T S P AE1 TH HH AY1 AH0 B AH1 V sp AH0 N D IH1 T S T UW1 EH1 N D Z AH0 P EH1 R AH0 N T L IY0 B IH0 AA1 N D DH AH0 HH ER0 AY1 Z AH0 N sp}|these take the shape of a long round arch, with its path high above, and its two ends apparently beyond the horizon.
+p298-182|p298|{DH EY1 JH AH1 S T W UH1 D N AA1 T HH AE1 V R AH1 N AH0 W EY1 sp}|they just would not have run away.
+p238-341|p238|{D AE1 N S IH0 NG W IH1 L HH EH1 L P HH IH1 Z AE1 NG K AH0 L Z AH0 N D HH IH1 Z F IY1 T sp}|dancing will help his ankles and his feet.
+p274-431|p274|{AH0 P AH0 L IY1 S S P OW1 K S W UH2 M AH0 N S EH1 D L AE1 S T N AY1 T DH AE1 T DH AH0 K EY1 S W AA1 Z K L OW1 Z D sp}|a police spokeswoman said last night that the case was closed.
+p298-104|p298|{IH1 T S S AH1 CH AH0 B Y UW1 T AH0 F AH0 L P L EY1 S sp L AY1 K AH0 P AE1 L AH0 S IH0 N IH1 T AH0 L IY0 sp}|it's such a beautiful place, like a palace in italy.
+p307-209|p307|{DH AH0 P R AA0 G N OW1 S AH0 S IH1 Z EH1 K S AH0 L AH0 N T sp}|the prognosis is excellent.
+p274-031|p274|{M IH1 S T ER0 D AA1 R L IH0 NG Y EH1 S T ER0 D EY2 D IH0 S M IH1 S T DH AH0 K R IH1 T IH0 S IH2 Z AH0 M sp}|mr darling yesterday dismissed the criticism.
+p307-095|p307|{AY1 HH AE1 V N OW1 P L AE1 N Z T UW1 CH EY1 N JH DH AH0 OW1 TH sp}|i have no plans to change the oath.
+p301-257|p301|{P IH1 G F AA1 R M ER0 Z AA1 R K AH0 M P L IY1 T L IY0 D IH0 S P AA1 N D AH0 N T sp}|pig farmers are completely despondent.
+p301-165|p301|{AY1 AE1 M AH0 W EH1 R DH AE1 T S AH1 M B AA2 D IY0 M EY1 D AH0 TH R EH1 T sp}|i am aware that somebody made a threat.
+p300-327|p300|{IH1 T M EY1 AO1 L S OW0 B IY1 HH ER0 L AE1 S T sp}|it may also be her last.
+p306-278|p306|{DH AE1 T sp HH AW2 EH1 V ER0 sp K AE1 N OW1 N L IY0 B IY1 AH0 CH IY1 V D B AY1 K AA1 N S T AH0 N T IH0 N V EH1 S T M AH0 N T sp}|that, however, can only be achieved by constant investment.
+p307-151|p307|{AY1 HH AE1 V AH0 N T JH AH1 S T G AO1 N IH0 N sp D AH1 N AH0 TH R IY1 sp AW1 ER0 R IH0 HH ER1 S AH0 L sp AH0 N D G AO1 N sp}|i haven't just gone in, done a three-hour rehearsal, and gone.
+p330-423|p330|{AY1 HH AE1 V N OW1 P R AA1 B L AH0 M W IH1 DH DH AE1 T sp}|i have no problem with that.
+p238-366|p238|{W IY1 P L EY1 D DH EH1 M AO1 F DH AH0 P IH1 CH sp}|we played them off the pitch.
+p300-191|p300|{T W AA1 D AH0 L IH1 Z AH0 K EY1 S IH0 N P OY1 N T sp}|twaddle is a case in point.
+p301-208|p301|{W IY1 HH AE1 V N OW1 CH OY1 S B AH1 T T UW1 SH AH1 T D AW1 N sp}|we have no choice but to shut down.
+p307-267|p307|{AY1 D UW1 N AA1 T OW1 N DH AH0 V EH1 S AH0 L IH0 N K W EH1 S CH AH0 N sp}|i do not own the vessel in question.
+p293-002|p293|{AE1 S K HH ER0 T UW1 B R IH1 NG DH IY1 Z TH IH1 NG Z W IH1 DH HH ER0 F R AH1 M DH AH0 S T AO1 R sp}|ask her to bring these things with her from the store.
+p238-228|p238|{AA1 R N IY0 IH0 G N AO1 R Z DH AH0 S AH0 G JH EH1 S CH AH0 N DH AE1 T HH IY1 HH AE1 Z EH1 V ER0 B IH1 N EH1 N IY0 W EH2 R EH1 L S sp}|arnie ignores the suggestion that he has ever been anywhere else.
+p300-216|p300|{JH IH1 M IY0 R IH0 T ER1 N D T UW1 AE1 B ER0 D IY2 N sp B AH1 T SH IY1 R IH0 M EY1 N D W IH1 DH JH AO1 R JH sp}|jimmy returned to aberdeen, but she remained with george.
+p300-134|p300|{DH EH1 R IH1 Z S T IH1 L M AH1 CH W ER1 K T UW1 B IY1 D AH1 N sp}|there is still much work to be done.
+p238-433|p238|{DH EY1 AA1 R IH0 N T IH1 R IY0 ER0 D IH0 Z AY1 N ER0 Z AH0 N D AA1 R K AH0 T EH2 K T S sp}|they are interior designers and architects.
+p264-405|p264|{G UH1 D R EH1 K ER0 D Z HH AE1 V AO1 L W EY2 Z B IH1 N R EH1 K AH0 G N AY2 Z D B AY1 S AH0 K S EH1 S F AH0 L F AA1 R M ER0 Z sp}|good records have always been recognised by successful farmers.
+p293-018|p293|{EH1 R AH0 S T AA2 T AH0 L TH AO1 T DH AE1 T DH AH0 R EY1 N B OW2 W AA1 Z K AA1 Z D B AY1 R AH0 F L EH1 K SH AH0 N AH1 V DH AH0 S AH1 N Z R EY1 Z B AY1 DH AH0 R EY1 N sp}|aristotle thought that the rainbow was caused by reflection of the sun's rays by the rain.
+p238-090|p238|{HH IY1 TH AO1 T SH IY1 W AA1 Z AH0 M EY1 Z IH0 NG sp}|he thought she was amazing.
+p238-425|p238|{W IY1 D IH0 S AY1 D IH0 D W IY1 W UH1 D G OW1 F AO1 R AH0 S P EH1 SH AH0 L AH0 S T IH0 N S AY1 D S EH1 N T ER0 sp}|we decided we would go for a specialist inside centre.
+p238-403|p238|{DH AE1 T R IH0 M EY1 N Z DH AH0 AH2 N AE1 N S ER0 D K W EH1 S CH AH0 N sp}|that remains the unanswered question.
+p238-143|p238|{B AH1 T IH1 T L UH1 K S G UH1 D F AO1 R N EH1 K S T Y IH1 R sp}|but it looks good for next year.

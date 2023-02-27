@@ -8,14 +8,14 @@ path:
   log_path: "/data/yingting/InterSpeech/10/output/log/VCTK"
   result_path: "/data/yingting/InterSpeech/10/output/result/VCTK"
 optimizer:
-  batch_size: 16
+  batch_size: 4
   betas: [0.9, 0.98]
   eps: 0.000000001
   weight_decay: 0.0
   grad_clip_thresh: 1.0
   grad_acc_step: 1
   warm_up_step: 4000
-  anneal_steps: [300000, 400000, 500000]
+  anneal_steps: [5000, 6000, 7000]
   anneal_rate: 0.3
 loss:
   noise_loss: "l1"
@@ -29,11 +29,11 @@ loss:
   lambda_word_dur: 0.0 # lambda_word_dur should not be activated, otherwise it will produce NaN value (For VCTK)
   lambda_sent_dur: 1.0
 step:
-  total_step: 900000
-  log_step: 100
-  synth_step: 1000
-  val_step: 1000
-  save_step: 25000
+  total_step: 10000 #10000
+  log_step: 100 #100
+  synth_step: 100 #
+  val_step: 500 # 1000
+  save_step: 2500 # 2500
   var_start_steps: 50000
 duration:
   binarization_start_steps: 6000

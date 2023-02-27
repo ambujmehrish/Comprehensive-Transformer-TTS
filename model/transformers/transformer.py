@@ -48,7 +48,7 @@ class TextEncoder(nn.Module):
         self.layer_stack = nn.ModuleList(
             [
                 FFTBlock(
-                    config, d_model, n_head, d_k, d_v, d_inner, kernel_size, dropout=dropout, module_type = "Decoder"
+                    config, d_model, n_head, d_k, d_v, d_inner, kernel_size, dropout=dropout, module_type = "Encoder"
                 )
                 for _ in range(n_layers)
             ]
@@ -225,7 +225,7 @@ class FFTBlock(nn.Module):
     def __init__(self, config, d_model, n_head, d_k, d_v, d_inner, kernel_size, dropout=0.1, module_type = "Decoder"):
         super(FFTBlock, self).__init__()
         self.module_type = module_type
-        self.slf_attn = MultiHeadAttention(n_head, d_model, d_k, d_v, dropout=dropout)
+        self.slf_attn = MultiHeadAttention(config,n_head, d_model, d_k, d_v, dropout=dropout)
         self.pos_ffn = PositionwiseFeedForward(
            config, d_model, d_inner, kernel_size, dropout=dropout, module_type = self.module_type
         )
@@ -248,20 +248,23 @@ class FFTBlock(nn.Module):
 class MultiHeadAttention(nn.Module):
     """ Multi-Head Attention """
 
-    def __init__(self, n_head, d_model, d_k, d_v, dropout=0.1):
+    def __init__(self, config, n_head, d_model, d_k, d_v, dropout=0.1):
         super(MultiHeadAttention, self).__init__()
 
         self.n_head = n_head
         self.d_k = d_k
         self.d_v = d_v
+        self.conditional_layer_norm = config["transformer"]["conditional_layer_norm"]
 
         self.w_qs = LinearNorm(d_model, n_head * d_k)
         self.w_ks = LinearNorm(d_model, n_head * d_k)
         self.w_vs = LinearNorm(d_model, n_head * d_v)
 
         self.attention = ScaledDotProductAttention(temperature=np.power(d_k, 0.5))
-        self.layer_norm = Condional_LayerNorm(d_model)
-        # self.layer_norm = nn.LayerNorm(d_model) # change here for Conditional Layer Norm
+        if self.conditional_layer_norm:
+            self.layer_norm = Condional_LayerNorm(d_model)
+        else:
+            self.layer_norm = nn.LayerNorm(d_model) # change here for Conditional Layer Norm
 
         self.fc = LinearNorm(n_head * d_v, d_model)
 
@@ -321,8 +324,10 @@ class MultiHeadAttention(nn.Module):
         )  # b x lq x (n*dv)
 
         output = self.dropout(self.fc(output))
-        output = self.layer_norm(output + residual,speaker_embeds) # conditional layer norm
-        # output = self.layer_norm(output + residual)
+        if self.conditional_layer_norm:
+            output = self.layer_norm(output + residual,speaker_embeds) # conditional layer norm
+        else:
+            output = self.layer_norm(output + residual)
 
         return output, attn
 
@@ -356,6 +361,7 @@ class PositionwiseFeedForward(nn.Module):
         super(PositionwiseFeedForward, self).__init__()
         self.module_type = module_type
         self.d_model = config["transformer"]["decoder_hidden"]
+        self.conditional_layer_norm = config["transformer"]["conditional_layer_norm"]
         # Use Conv1D
         # position-wise
         self.w_1 = nn.Conv1d(
@@ -379,8 +385,12 @@ class PositionwiseFeedForward(nn.Module):
             self.r = config["adapters"]["r"]
             self.adapter_block = MOA(self.number_of_adapters,self.d_model,self.c,self.r)
 
-        # self.layer_norm = nn.LayerNorm(d_in)
-        self.layer_norm = Condional_LayerNorm(d_in)
+        
+        if self.conditional_layer_norm:
+            self.layer_norm = Condional_LayerNorm(d_in)
+        else:
+            self.layer_norm = nn.LayerNorm(d_in)
+            
         self.dropout = nn.Dropout(dropout)
 
     def forward(self, x,speaker_embeds= None):
@@ -391,6 +401,10 @@ class PositionwiseFeedForward(nn.Module):
         if self.adapter_required and self.module_type == "Decoder":
             output = self.adapter_block(output)
         output = self.dropout(output)
-        output = self.layer_norm(output + residual,speaker_embeds)
+        if self.conditional_layer_norm:
+            output = self.layer_norm(output + residual,speaker_embeds)
+        else:
+            output = self.layer_norm(output + residual)
+            
 
         return output
