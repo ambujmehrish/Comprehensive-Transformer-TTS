@@ -107,6 +107,7 @@ adapters:
 
   required: True
   finetune: True
+  adapter_block_type: "RA"
   number_of_adapters: 10
   c: 0.80
   r: 64

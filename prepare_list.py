@@ -14,7 +14,7 @@ from tqdm import tqdm
 # filter_length = 1024
 # hop_length = 256
 number_of_speakers = 10
-dataset_name = "VCTK"
+dataset_name = "L2ARCTIC"
 max_train_duration = 10
 max_val_duration = 60
 out_dir = f"./Subsample/{dataset_name}"
@@ -38,7 +38,7 @@ if dataset_name == 'LTS':
             speaker_info["GENDER"].append(gender.strip())
             speaker_info["DSET"].append(dset.strip())
             speaker_info["DURATION"].append(float(duration.strip()))
-    INFO = pandas.DataFrame.from_dict(speaker_info)
+    # INFO = pandas.DataFrame.from_dict(speaker_info)
 elif dataset_name == "VCTK":
     with open("/data/yingting/Dataset/VCTK/speaker-info.txt","r") as f:
         lines = f.readlines()
@@ -50,7 +50,18 @@ elif dataset_name == "VCTK":
         speaker_info["GENDER"].append(line[2].strip())
         speaker_info["ACCENTS"].append(line[3].strip())
         speaker_info["DURATION"].append(0.0)
-    INFO = pandas.DataFrame.from_dict(speaker_info)
+elif dataset_name == "L2ARCTIC":
+    with open("/data/yingting/Dataset/L2ARCTIC/speaker-info.txt","r") as f:
+        lines = f.readlines()
+    speaker_info = {"ID":[],"GENDER":[],"NATIVE":[],"NUM":[],"ANNOTATION":[]}
+    for line in lines[2:]:
+        id,gender,native,num,annotation = line.split('|')[1:6]
+        speaker_info["ID"].append(id.strip())
+        speaker_info["GENDER"].append(gender.strip())
+        speaker_info["NATIVE"].append(native.strip())
+        speaker_info["NUM"].append(num.strip())
+        speaker_info["ANNOTATION"].append(annotation.strip())        
+INFO = pandas.DataFrame.from_dict(speaker_info)
     
 for index,row in tqdm(INFO.iterrows()):
     print("Comuting duration for speaker {}".format(row["ID"]))

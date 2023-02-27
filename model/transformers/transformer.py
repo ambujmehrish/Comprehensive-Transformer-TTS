@@ -10,6 +10,7 @@ from .blocks import (
     get_sinusoid_encoding_table,
     LinearNorm,
     Condional_LayerNorm,
+    ResidualAdapter,
     MOA,
 )
 from .adapters import PrefixEncoder
@@ -105,9 +106,12 @@ class TextEncoder(nn.Module):
                 :, :max_len, :
             ].expand(batch_size, -1, -1)
 
-        for enc_layer in self.layer_stack:
+        for i, enc_layer in enumerate(self.layer_stack):
+            
+            past_key_value = past_key_values[i] if past_key_values is not None else None
+            
             enc_output, enc_slf_attn = enc_layer(
-                enc_output, mask=mask, speaker_embeds=speaker_embeds, slf_attn_mask=slf_attn_mask, past_key_values=past_key_values
+                enc_output, mask=mask, speaker_embeds=speaker_embeds, slf_attn_mask=slf_attn_mask, past_key_values=past_key_value
             )
             if return_attns:
                 enc_slf_attn_list += [enc_slf_attn]
@@ -208,9 +212,12 @@ class Decoder(nn.Module):
             mask = mask[:, :max_len]
             slf_attn_mask = slf_attn_mask[:, :, :max_len]
 
-        for dec_layer in self.layer_stack:
+        for i, dec_layer in enumerate(self.layer_stack):
+            
+            past_key_value = past_key_values[i] if past_key_values is not None else None
+            
             dec_output, dec_slf_attn = dec_layer(
-                dec_output, mask=mask,speaker_embeds= speaker_embeds, slf_attn_mask=slf_attn_mask, past_key_values=past_key_values
+                dec_output, mask=mask,speaker_embeds= speaker_embeds, slf_attn_mask=slf_attn_mask, past_key_values=past_key_value
             )
             
             if return_attns:
@@ -362,6 +369,7 @@ class PositionwiseFeedForward(nn.Module):
         self.module_type = module_type
         self.d_model = config["transformer"]["decoder_hidden"]
         self.conditional_layer_norm = config["transformer"]["conditional_layer_norm"]
+        self.adapter_block_type = config["adapters"]["adapter_block_type"]
         # Use Conv1D
         # position-wise
         self.w_1 = nn.Conv1d(
@@ -383,7 +391,12 @@ class PositionwiseFeedForward(nn.Module):
             self.number_of_adapters = config["adapters"]["number_of_adapters"]
             self.c = config["adapters"]["c"]
             self.r = config["adapters"]["r"]
-            self.adapter_block = MOA(self.number_of_adapters,self.d_model,self.c,self.r)
+            if self.adapter_block_type == "MOA":
+                self.adapter_block = MOA(self.number_of_adapters,self.d_model,self.c,self.r)
+            elif self.adapter_block_type == "RA":
+                self.adapter_block = ResidualAdapter("residual_adapter",self.d_model,self.r)
+            else:
+                pass
 
         
         if self.conditional_layer_norm:
@@ -399,7 +412,10 @@ class PositionwiseFeedForward(nn.Module):
         output = self.w_2(F.relu(self.w_1(output)))
         output = output.transpose(1, 2)
         if self.adapter_required and self.module_type == "Decoder":
-            output = self.adapter_block(output)
+            if self.adapter_block_type == "MOA":
+                output = self.adapter_block(output)
+            elif self.adapter_block_type == "RA":
+                output = self.adapter_block(output,residual)
         output = self.dropout(output)
         if self.conditional_layer_norm:
             output = self.layer_norm(output + residual,speaker_embeds)
